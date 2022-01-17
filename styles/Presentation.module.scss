@@ -8,6 +8,7 @@
   justify-content: center;
   gap: 1rem;
   padding: 2rem 0;
+  position: relative;
   background:
               url("/img/presentation_3.png") no-repeat bottom left,
               url("/img/presentation_2.png") no-repeat bottom left,
@@ -17,16 +18,32 @@
               url("/img/presentation_4.png") no-repeat bottom right,
               $gray-background;
   background-size: 35%, 25%, 24%, 35%, 25%, 24%;
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding-top: 6rem;
+    background-size: 140%, 110%, 130%, 0, 0, 0;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 1;
+    }
+  }
   &Logo {
     position: relative;
     aspect-ratio: 15 / 7;
     width: 12%;
     min-width: 10rem;
     margin: 0 auto;
+    z-index: 2;
   }
   &Message {
     width: 40%;
     text-align: center;
     font-size: 1.1rem;
+    min-width: 20rem;
+    z-index: 2;
   }
 }

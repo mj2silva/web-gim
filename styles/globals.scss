@@ -44,3 +44,31 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: $blue-hover;
 }
+
+section {
+  box-sizing: content-box;
+  overflow-x: hidden;
+}
+
+.section-title {
+  text-align: center;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  gap: .5rem;
+  height: 4rem;
+  font-weight: 600;
+  &--normal {
+    border-left: 5px solid $blue-primary;
+    padding-left: .8rem;
+    border-bottom: 5px solid transparent;
+  }
+  &--highlighted {
+    color: $blue-primary;
+    box-sizing: content-box;
+    border-bottom: 5px solid $blue-primary;
+  }
+}

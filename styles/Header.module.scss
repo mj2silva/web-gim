@@ -73,5 +73,9 @@
     position: relative;
     right: 3rem;
     z-index: 9;
+    height: 3rem;
+    @media screen and (max-width: $breakpoint-tablet) {
+      right: 1rem;
+    }
   }
 }

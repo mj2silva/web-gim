@@ -1,0 +1,48 @@
+@import "common/index";
+
+.ServicesPresentation {
+  padding: 3rem 1rem;
+  &Title {
+    margin: 1rem 0 2rem 0;
+    @media screen and (max-width: $breakpoint-tablet) {
+      font-size: .8rem;
+    }
+  }
+  &Cards {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  &Card {
+    min-width: 16rem;
+    aspect-ratio: 11 / 12;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.75);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 12px solid $blue-primary;
+  }
+  &Info {
+    display: flex;
+    justify-content: center;
+  }
+  &Number {
+    font-size: 4rem;
+    font-weight: bold;
+    color: $blue-primary;
+  }
+  &Image {
+    position: relative;
+    width: 3rem;
+    aspect-ratio: 8 / 9;
+  }
+  &Name {
+    font-size: 1.2rem;
+    max-width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+  }
+}

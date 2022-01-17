@@ -24,6 +24,8 @@ const Cover: FC = () => {
               src={image.url}
               layout="fill"
               alt={image.url}
+              objectFit="cover"
+              objectPosition="right"
             />
           ))}
         </div>
