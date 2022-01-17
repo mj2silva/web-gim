@@ -11,6 +11,7 @@ body {
 
 .main {
   padding-top: $headerHeight;
+  height: 100%;
 }
 
 .image {
@@ -27,6 +28,7 @@ body {
   text-decoration: none;
   font-size: 1rem;
   font-family: inherit;
+  cursor: pointer;
   &:hover {
     background-color: $blue-hover;
   }
@@ -79,4 +81,20 @@ header {
     box-sizing: content-box;
     border-bottom: 5px solid $blue-primary;
   }
+
+}
+
+main {
+  position: relative;
+}
+
+.whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 4rem;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background-color: green;
+  z-index: 99;
 }

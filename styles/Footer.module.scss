@@ -1,0 +1,80 @@
+@import "common/index";
+
+.Footer {
+  &Body {
+    background-color: $white;
+    border-top: 2px solid $blue-primary;
+    min-height: 10rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+    @media screen and (max-width: $breakpoint-tablet){
+      flex-direction: column;
+      gap: 3rem;
+      padding: 2rem 2rem;
+    }
+  }
+  &Logo {
+    position: relative;
+    width: 12rem;
+    aspect-ratio: 16 / 8;
+  }
+  &Foot {
+    background-color: $blue-primary;
+    min-height: 4rem;
+    color: $white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem ;
+  }
+  &Certifications {
+    display: flex;
+    @media screen and (max-width: $breakpoint-tablet){
+      flex-direction: column;
+      gap: 0;
+    }
+  }
+  &Certification {
+    position: relative;
+  }
+  &Copy {
+    display: block;
+    width: 100%;
+    & a {
+      color: $white;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  &SocialMedia {
+    display: flex;
+    gap: .5rem;
+  }
+  &SocialMediaLogo {
+    border-radius: 8px;
+    font-weight: bold;
+    width: 2.8rem;
+    aspect-ratio: 1 / 1;
+    background-color: $blue-primary;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition-duration: 250ms;
+    &:hover {
+      background-color: $blue-hover;
+    }
+  }
+  &Certification {
+    width: 11rem;
+    height: 10rem;
+  }
+}
