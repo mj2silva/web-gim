@@ -3,8 +3,8 @@ import CarouselProvider from "@components/Caroussel/CarouselContext";
 import styles from "@styles/Cover.module.scss";
 import Link from "next/link";
 import cn from "classnames";
-import CoverCarouselImage from "@components/home/CoverCarouselImage";
-import CoverCarouselControl from "@components/home/CoverCarouselControl";
+import CoverCarouselImage from "@components/home/Cover/CoverCarouselImage";
+import CoverCarouselControl from "@components/home/Cover/CoverCarouselControl";
 
 const images = [
   {

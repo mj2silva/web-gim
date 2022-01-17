@@ -2,7 +2,7 @@ import Nav from "@components/Layout/Header/Nav/Nav";
 import NavLink from "@components/Layout/Header/Nav/NavLink";
 import styles from "@styles/Nav.module.scss";
 import NavButton from "@components/Layout/Header/Nav/NavButton";
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import NavGroup from "@components/Layout/Header/Nav/NavGroup";
 import cn from "classnames";
 import { useRouter } from "next/router";
@@ -90,6 +90,7 @@ const HeaderNav: FC<Props> = ({
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen((io) => !io);
   const { pathname } = useRouter();
+  const [isHidden, setIsHidden] = useState(false);
 
   useEffect(() => {
     setIsOpen(false);
@@ -100,6 +101,18 @@ const HeaderNav: FC<Props> = ({
     [closedClassName || "closed"]: !isOpen,
   });
 
+  const navRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!isOpen) {
+      window.setTimeout(() => {
+        setIsHidden(true);
+      }, 500);
+    } else {
+      setIsHidden(false);
+    }
+  }, [isOpen]);
+
   return (
     <div className={className}>
       <NavButton
@@ -107,23 +120,33 @@ const HeaderNav: FC<Props> = ({
         open={isOpen}
         onClick={toggleOpen}
       />
-      <div hidden={!isOpen} className={headerNavClassName}>
-        <Nav className={navClassName}>
-          {navigationObject.map((item) => {
-            switch (item.type) {
-              case "group":
-                return (
-                  <NavGroup key={item.title} title={item.title}>
-                    {item.items.map(renderItem)}
-                  </NavGroup>
-                );
-              case "link":
-                return renderItem(item);
-              default:
-                return null;
-            }
-          })}
-        </Nav>
+      <div>
+        <div
+          ref={navRef}
+          className={headerNavClassName}
+          style={{
+            transform: isHidden
+              ? "translateX(100%) scaleX(100%)"
+              : "translateX(0)",
+          }}
+        >
+          <Nav className={navClassName}>
+            {navigationObject.map((item) => {
+              switch (item.type) {
+                case "group":
+                  return (
+                    <NavGroup key={item.title} title={item.title}>
+                      {item.items.map(renderItem)}
+                    </NavGroup>
+                  );
+                case "link":
+                  return renderItem(item);
+                default:
+                  return null;
+              }
+            })}
+          </Nav>
+        </div>
       </div>
     </div>
   );

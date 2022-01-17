@@ -40,14 +40,12 @@
     transition-duration: 500ms;
     &_open {
       opacity: 1;
-      transform: translateX(0);
       & .HeaderNav {
         transform: translateX(0);
       }
     }
     &_closed {
       opacity: 0;
-      transform: translateX(100%);
       & .HeaderNav {
         transform: translateX(100%);
       }
