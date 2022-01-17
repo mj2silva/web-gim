@@ -1,0 +1,39 @@
+@import "common/index";
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  max-width: 90%;
+  margin: 0 auto;
+  gap: .8rem;
+  box-sizing: border-box;
+  &Element {
+    width: 100%;
+    position: relative;
+    & label {
+      display: none;
+    }
+    & input {
+      background: url("/img/municipal.svg") no-repeat .5rem, $white;
+      background-size: 1.5rem;
+      width: 100%;
+      padding: .7rem 1rem .7rem 2.5rem;
+      position: relative;
+      box-sizing: border-box;
+    }
+    & textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: .5rem 1rem;
+      position: relative;
+      font-family: inherit;
+    }
+  }
+  &Button {
+    cursor: pointer;
+    width: 10rem;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+}

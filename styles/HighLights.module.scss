@@ -1,0 +1,35 @@
+@import "common/index";
+
+.HighLights {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 4rem;
+  width: 70%;
+  overflow-x: hidden;
+  margin: 0 auto;
+  gap: 2rem 7rem;
+  &Item {
+    width: 13rem;
+  }
+  &Name {
+    font-size: .8rem;
+    text-align: center;
+    font-weight: bold;
+  }
+  &Title {
+    color: $blue-primary;
+    font-size: 4rem;
+    font-weight: bold;
+    display: flex;
+    gap: .5rem;
+    justify-content: center;
+  }
+  &Number {
+
+  }
+  &Text {
+
+  }
+}
