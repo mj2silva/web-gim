@@ -113,7 +113,7 @@ const HeaderNav: FC<Props> = ({
             switch (item.type) {
               case "group":
                 return (
-                  <NavGroup title={item.title}>
+                  <NavGroup key={item.title} title={item.title}>
                     {item.items.map(renderItem)}
                   </NavGroup>
                 );

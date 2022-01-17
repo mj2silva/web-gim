@@ -8,12 +8,27 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-main {
+.main {
   padding-top: $headerHeight;
 }
 
 .image {
   position: relative;
+}
+
+.button {
+  background-color: $blue-primary;
+  transition-duration: 500ms;
+  padding: .5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  color: $white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: inherit;
+  &:hover {
+    background-color: $blue-hover;
+  }
 }
 
 ::-webkit-scrollbar{

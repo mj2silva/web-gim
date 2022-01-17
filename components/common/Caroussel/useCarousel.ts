@@ -33,10 +33,12 @@ const useCarousel = (props: CarouselProps) => {
   const reStartInterval = useCallback(() => {
     if (autoPlay) {
       setCurrentInterval((ci) => {
-        if (ci) window.clearInterval(ci);
-        return window.setInterval(() => {
-          goNext();
-        }, intervalTime);
+        if (!ci) {
+          return window.setInterval(() => {
+            goNext();
+          }, intervalTime);
+        }
+        return undefined;
       });
     }
   }, [autoPlay, goNext, intervalTime]);
