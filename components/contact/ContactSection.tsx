@@ -1,7 +1,7 @@
 import { FC } from "react";
 import SectionTitle from "@components/SectionTitle";
 
-import styles from "@styles/ContactSection.module.scss";
+import styles from "@styles/modules/ContactSection.module.scss";
 import ContactForm from "@components/contact/ContactForm";
 
 const ContactSection: FC = () => {

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import GIMLogo from "@components/GIMLogo";
 
-import styles from "@styles/Presentation.module.scss";
+import styles from "@styles/modules/Presentation.module.scss";
 
 const Presentation: FC = () => {
   return (

@@ -1,6 +1,6 @@
 import { FC, FormEventHandler } from "react";
 
-import styles from "@styles/ContactForm.module.scss";
+import styles from "@styles/modules/ContactForm.module.scss";
 
 const ContactForm: FC = () => {
   const handleSubmit: FormEventHandler<HTMLFormElement> = (event) => {

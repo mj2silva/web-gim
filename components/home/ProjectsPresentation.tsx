@@ -2,7 +2,7 @@ import { FC } from "react";
 import Image from "next/image";
 import SectionTitle from "@components/SectionTitle";
 
-import styles from "@styles/ProjectsPresentation.module.scss";
+import styles from "@styles/modules/ProjectsPresentation.module.scss";
 import CarouselProvider from "@components/Caroussel/CarouselContext";
 
 const ProjectsPresentation: FC = () => {

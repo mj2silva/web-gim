@@ -39,7 +39,7 @@ const Projects: Project[] = [
   },
 ];
 
-import styles from "@styles/ProjectCards.module.scss";
+import styles from "@styles/modules/ProjectCards.module.scss";
 import ProjectCard from "@components/projects/ProjectCard";
 
 const ProjectCards = () => {

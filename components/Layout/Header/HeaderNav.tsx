@@ -1,6 +1,6 @@
 import Nav from "@components/Layout/Header/Nav/Nav";
 import NavLink from "@components/Layout/Header/Nav/NavLink";
-import styles from "@styles/Nav.module.scss";
+import styles from "@styles/modules/Nav.module.scss";
 import NavButton from "@components/Layout/Header/Nav/NavButton";
 import { FC, useEffect, useRef, useState } from "react";
 import NavGroup from "@components/Layout/Header/Nav/NavGroup";

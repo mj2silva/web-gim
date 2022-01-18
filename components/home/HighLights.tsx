@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import styles from "@styles/HighLights.module.scss";
+import styles from "@styles/modules/HighLights.module.scss";
 import HighLightNumber from "@components/home/HighLightNumber";
 
 const HighLights: FC = () => {

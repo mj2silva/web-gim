@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image, { ImageProps } from "next/image";
 
-import styles from "@styles/CoverPicture.module.scss";
+import styles from "@styles/modules/CoverPicture.module.scss";
 
 interface Props extends ImageProps {}
 

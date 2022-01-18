@@ -1,5 +1,5 @@
 import { FC, useContext } from "react";
-import styles from "@styles/Cover.module.scss";
+import styles from "@styles/modules/Cover.module.scss";
 import { CarouselContext } from "@components/Caroussel/CarouselContext";
 import cn from "classnames";
 

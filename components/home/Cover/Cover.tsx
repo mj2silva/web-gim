@@ -1,6 +1,6 @@
 import { FC } from "react";
 import CarouselProvider from "@components/Caroussel/CarouselContext";
-import styles from "@styles/Cover.module.scss";
+import styles from "@styles/modules/Cover.module.scss";
 import Link from "next/link";
 import cn from "classnames";
 import CoverCarouselImage from "@components/home/Cover/CoverCarouselImage";

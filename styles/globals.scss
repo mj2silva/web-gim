@@ -86,7 +86,12 @@ header {
     box-sizing: content-box;
     border-bottom: 5px solid $blue-primary;
   }
+}
 
+.section-subtitle {
+  color: $blue-primary;
+  border-left: 4px solid $blue-primary;
+  padding-left: 1rem;
 }
 
 main {

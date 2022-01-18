@@ -1,7 +1,7 @@
 import { FC } from "react";
 import cn from "classnames";
 
-import styles from "@styles/Nav.module.scss";
+import styles from "@styles/modules/Nav.module.scss";
 
 interface Props {
   className?: string;

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 
-import styles from "@styles/Footer.module.scss";
+import styles from "@styles/modules/Footer.module.scss";
 import GIMLogo from "@components/GIMLogo";
 
 const Footer: FC = () => {

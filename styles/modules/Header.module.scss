@@ -1,4 +1,4 @@
-@import "common/index";
+@import "../common/index";
 
 .Header {
   position: fixed;
@@ -35,6 +35,9 @@
   &Logo {
     width: 12rem;
     aspect-ratio: 16 / 7;
+    @media screen and (max-width: $breakpoint-tablet){
+      width: 9rem;
+    }
   }
   &Nav {
     width: 100%;

@@ -1,5 +1,5 @@
 import { FC, useState } from "react";
-import styles from "@styles/Nav.module.scss";
+import styles from "@styles/modules/Nav.module.scss";
 
 interface Props {
   title?: string;

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import Image from "next/image";
 import SectionTitle from "@components/SectionTitle";
-import styles from "@styles/ServicesPresentation.module.scss";
+import styles from "@styles/modules/ServicesPresentation.module.scss";
 
 const ServicesPresentation: FC = () => {
   return (

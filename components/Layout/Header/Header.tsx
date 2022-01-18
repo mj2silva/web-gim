@@ -1,7 +1,7 @@
 import { FC, useEffect, useState } from "react";
 import GIMLogo from "@components/GIMLogo";
 
-import styles from "@styles/Header.module.scss";
+import styles from "@styles/modules/Header.module.scss";
 import { useRouter } from "next/router";
 import HeaderNav from "@components/Layout/Header/HeaderNav";
 import cn from "classnames";

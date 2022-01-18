@@ -1,7 +1,7 @@
 import { ButtonHTMLAttributes, FC } from "react";
 import cn from "classnames";
 
-import styles from "@styles/MenuButton.module.scss";
+import styles from "@styles/modules/MenuButton.module.scss";
 
 interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
   open?: boolean;

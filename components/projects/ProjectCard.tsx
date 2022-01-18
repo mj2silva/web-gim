@@ -2,7 +2,7 @@ import { FC } from "react";
 import { Project } from "@components/projects/types";
 import Image from "next/image";
 
-import styles from "@styles/ProjectCards.module.scss";
+import styles from "@styles/modules/ProjectCards.module.scss";
 interface Props {
   project: Project;
 }
