@@ -1,0 +1,39 @@
+@import "../common/index";
+
+.EnterpriseValues {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: $gray-background;
+  padding: 4rem 4rem;
+  gap: 2rem 5rem;
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 4rem 1rem;
+  }
+}
+
+.EnterpriseValueCard {
+  display: flex;
+  flex-direction: column;
+  max-width: 20rem;
+  &Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $blue-primary;
+    font-weight: 500;
+    font-size: 1.2rem;
+    & * {
+      font-weight: 500;
+      margin: 0 .5rem;
+    }
+  }
+  &Icon {
+    font-size: 2rem;
+  }
+  &Description {
+    & p {
+      text-align: center;
+    }
+  }
+}

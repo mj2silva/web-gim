@@ -4,10 +4,10 @@ interface Props {
   title: string;
 }
 
-const SectionSubtitle: FC<Props> = () => {
+const SectionSubtitle: FC<Props> = ({ title }) => {
   return (
     <div className="section-subtitle">
-      <h3>Conozca nuestro equipo</h3>
+      <h3>{title}</h3>
     </div>
   );
 };

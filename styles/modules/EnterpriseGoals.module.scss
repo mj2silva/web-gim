@@ -1,0 +1,45 @@
+@import "../common/index";
+
+.EnterpriseGoals {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: 1rem 4rem;
+  gap: 2rem;
+  width: 100%;
+  flex-wrap: wrap;
+  @media screen and (max-width: $breakpoint-tablet) {
+    padding: 1rem 1rem;
+  }
+  &Mission {
+    width: 48%;
+    & ol {
+      list-style: none;
+      counter-reset: my-awesome-counter;
+      & li {
+        counter-increment: my-awesome-counter;
+        position: relative;
+        &::before {
+          content: counter(my-awesome-counter);
+          color: $blue-primary;
+          font-weight: bold;
+          position: absolute;
+          font-size: 1.6rem;
+          left: -1.5rem;
+          top: 0;
+          bottom: 0;
+          margin: auto 0;
+        }
+      }
+    }
+  }
+  &Vision {
+    width: 48%;
+  }
+  &Mission, &Vision {
+    @media screen and (max-width: $breakpoint-tablet) {
+      width: 98%;
+    }
+  }
+
+}
