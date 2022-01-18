@@ -40,7 +40,7 @@ const navigationObject: NavigationObject[] = [
     type: "group",
     items: [
       {
-        href: "/nosotros/quienes-somos",
+        href: "/nosotros",
         title: "¿QUIENES SOMOS?",
         type: "link",
       },
