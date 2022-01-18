@@ -1,0 +1,101 @@
+@import "common/index";
+
+.Projects {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  padding-bottom: 4rem;
+  &Load {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &LoadButton {
+    display: none;
+    @media screen and (max-width: $breakpoint-tablet) {
+      border-radius: 50%;
+      box-sizing: content-box;
+      padding: 0;
+      width: 4rem;
+      font-size: 2rem;
+      color: $blue-primary;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+      aspect-ratio: 1 / 1;
+      border: 3px solid $blue-primary;
+      background-color: transparent;
+      &span {
+        line-height: 0;
+      }
+      &:hover {
+        background-color: $gray-background;
+      }
+    }
+  }
+}
+
+.ProjectCards {
+  padding: 2rem 1rem 4rem 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.ProjectCard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 28rem;
+  min-width: 15rem;
+  cursor: pointer;
+  transition-duration: 250ms;
+  overflow: hidden;
+  &:before {
+    transition-duration: 250ms;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    backdrop-filter: grayscale(1);
+    z-index: 1;
+  }
+  &:hover {
+    .ProjectCard {
+      &Info {
+      }
+    }
+  }
+  &:hover:before {
+    transform: translateY(100%);
+  }
+  &Name {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+  }
+  &Image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+  }
+  &Info {
+    background-color: $blue-primary;
+    color: white;
+    padding: .8rem 1rem;
+  }
+  &Location {
+    margin: 0;
+    font-weight: 500;
+  }
+}

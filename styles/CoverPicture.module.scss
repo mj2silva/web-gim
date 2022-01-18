@@ -1,0 +1,10 @@
+@import "common/index";
+
+.CoverPicture {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 8 / 1;
+  @media screen and (max-width: $breakpoint-tablet){
+    display: none;
+  }
+}

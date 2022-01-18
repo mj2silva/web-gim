@@ -28,6 +28,9 @@
   &PageName {
     border-left: solid 4px $blue-primary;
     padding: .3rem .9rem;
+    @media screen and (max-width: $breakpoint-tablet){
+      display: none;
+    }
   }
   &Logo {
     width: 12rem;
