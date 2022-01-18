@@ -4,3 +4,9 @@ export interface Value {
   description: string;
   icon?: string;
 }
+
+export interface Benefit {
+  id: number;
+  description: string;
+  icon?: string;
+}

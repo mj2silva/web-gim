@@ -1,40 +1,39 @@
 @import "../common/index";
 
-.EnterpriseValues {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  background-color: $gray-background;
+.EnterpriseBenefits {
   padding: 4rem 4rem;
-  gap: 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem 0;
   @media screen and (max-width: $breakpoint-tablet) {
     padding: 4rem 1rem;
   }
+  &Title {
+    height: 2rem;
+  }
+  &Cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: $white;
+    gap: 2rem 2rem;
+  }
 }
 
-.EnterpriseValueCard {
+.EnterpriseBenefitCard {
   display: flex;
   flex-direction: column;
   max-width: 20rem;
+
   &Title {
     display: flex;
     align-items: center;
     justify-content: center;
     color: $blue-primary;
     font-weight: 500;
-    font-size: 1.2rem;
-    & * {
-      font-weight: 500;
-      margin: 0 .5rem;
-    }
-  }
-  &Name {
-    font-size: 1.2rem;
-    text-align: center;
-    display: inline-block;
   }
   &Icon {
-    font-size: 2rem;
+    font-size: 4rem;
   }
   &Description {
     & p {
