@@ -12,7 +12,7 @@ const Servicios: NextPage = () => {
       </Head>
       <main className="main">
         <CoverPicture
-          src="/img/portada-proyectos.jpg"
+          src="/img/encabezado.png"
           objectPosition="bottom"
           objectFit="cover"
         />

@@ -1,5 +1,8 @@
 import { NextPage } from "next";
 import Head from "next/head";
+import ServicesDropdown from "@components/services/ServicesDropdown";
+import ContactSection from "@components/contact/ContactSection";
+import CoverPicture from "@components/CoverPicture";
 
 const Servicios: NextPage = () => {
   return (
@@ -8,7 +11,9 @@ const Servicios: NextPage = () => {
         <title>Servicios | GIM</title>
       </Head>
       <main className="main">
-        <h1>Servicios</h1>
+        <CoverPicture src={"/img/encabezado2.png"} />
+        <ServicesDropdown />
+        <ContactSection />
       </main>
     </>
   );
