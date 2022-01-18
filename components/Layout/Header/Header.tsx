@@ -5,6 +5,7 @@ import styles from "@styles/modules/Header.module.scss";
 import { useRouter } from "next/router";
 import HeaderNav from "@components/Layout/Header/HeaderNav";
 import cn from "classnames";
+import HeaderBreadCrumb from "@components/Layout/Header/HeaderBreadCrumb";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,11 +27,7 @@ const Header: FC = () => {
     <header className={headerClassName}>
       <div className={styles.HeaderTitle}>
         <GIMLogo className={styles.HeaderLogo} />
-        {router.pathname.toUpperCase().slice(1) && (
-          <div className={styles.HeaderPageName}>
-            {router.pathname.toUpperCase().slice(1)}
-          </div>
-        )}
+        <HeaderBreadCrumb />
       </div>
       <HeaderNav
         className={styles.HeaderMenu}

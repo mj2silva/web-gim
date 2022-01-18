@@ -1,0 +1,69 @@
+@import "../common/index";
+
+.TeamCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 2rem 1rem;
+  justify-content: center;
+  & .TeamCard {
+    width: 45%;
+    max-width: 40rem;
+    @media screen and (max-width: $breakpoint-laptop){
+      width: 100%;
+      max-width: 30rem;
+    }
+  }
+}
+
+.TeamCard {
+  display: flex;
+  flex-direction: column;
+  padding: .5rem 1rem;
+  flex-wrap: wrap;
+  &Header {
+    color: $blue-primary;
+    & * {
+      font-size: 1.8rem;
+      font-weight: 500;
+      margin: .2rem 0;
+    }
+  }
+  &Body {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+    padding: .5rem 0;
+    align-items: center;
+    @media screen and (max-width: $breakpoint-laptop){
+      flex-direction: column;
+    }
+  }
+  &Info {
+    width: 100%;
+  }
+  &Picture {
+    position: relative;
+    width: 100%;
+    min-width: 12rem;
+    aspect-ratio: 14 / 9;
+    overflow: hidden;
+  }
+  &Title {
+
+  }
+  &Description {
+
+  }
+  &ContactInfo {
+    display: flex;
+    gap: .5rem;
+
+    & span {
+      color: $gray;
+    }
+    & span:first-child {
+      color: $blue-primary;
+    }
+  }
+}

@@ -10,3 +10,12 @@ export interface Benefit {
   description: string;
   icon?: string;
 }
+
+export interface TeamMember {
+  id: number;
+  name: string;
+  title: string;
+  description: string;
+  pictureUrl: string;
+  email: string;
+}
