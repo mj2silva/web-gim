@@ -1,10 +1,16 @@
 import { NextPage } from "next";
+import Head from "next/head";
 
 const Servicios: NextPage = () => {
   return (
-    <main className="main">
-      <h1>Servicios</h1>
-    </main>
+    <>
+      <Head>
+        <title>Servicios | GIM</title>
+      </Head>
+      <main className="main">
+        <h1>Servicios</h1>
+      </main>
+    </>
   );
 };
 

@@ -1,11 +1,17 @@
 import { NextPage } from "next";
 import ContactSection from "@components/contact/ContactSection";
+import Head from "next/head";
 
 const Contacto: NextPage = () => {
   return (
-    <main className="main">
-      <ContactSection />
-    </main>
+    <>
+      <Head>
+        <title>Contacto | GIM</title>
+      </Head>
+      <main className="main">
+        <ContactSection />
+      </main>
+    </>
   );
 };
 
