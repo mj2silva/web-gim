@@ -36,7 +36,7 @@ const EnterpriseBenefits: FC = () => {
   return (
     <section className={styles.EnterpriseBenefits}>
       <div className={styles.EnterpriseBenefitsTitle}>
-        <SectionSubtitle title="¿Por qué escogernos?" />
+        <SectionSubtitle title="¿Por qué elegirnos?" />
       </div>
       <div className={styles.EnterpriseBenefitsCards}>
         {benefits.map((benefit) => (
