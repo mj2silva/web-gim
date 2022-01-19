@@ -1,40 +1,36 @@
 @import "../common/index";
 
-.Services {
+.ServiceDetail {
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem 1rem;
   box-sizing: border-box;
-  @media screen and (max-width: $breakpoint-tablet) {
-    padding: 3rem 0;
-  }
   &Dropdown {
     display: flex;
     width: 100%;
-    max-width: $breakpoint-laptop;
     flex-direction: column;
     &Item {
-      border: 1px solid black;
       margin-bottom: 2rem;
       transition-duration: 250ms;
-      &_close {
-        border-color: $gray-background;
-      }
+      border-radius: 10px;
+      overflow: hidden;
     }
     &Header {
       display: flex;
-      padding: 1rem;
+      padding: .5rem 1rem;
       box-sizing: border-box;
       justify-content: space-between;
       width: 100%;
+      background-color: $blue-primary;
+      color: $white;
+      font-size: 1.2rem;
       &_open {
 
       }
       &_close {
-        background-color: $gray-background;
+
       }
     }
     &Number {
@@ -42,48 +38,33 @@
       font-size: 5rem;
       font-weight: 700;
       padding: 0 .5rem;
-      @media screen and (max-width: $breakpoint-tablet) {
-        font-size: 3rem;
-      }
-    }
-    &Name {
-      font-size: 2rem;
-      @media screen and (max-width: $breakpoint-tablet) {
-        font-size: .8rem;
-      }
     }
     &Icon {
       font-size: 3rem;
-      min-width: 4rem;
+      width: 4rem;
       font-weight: bold;
       aspect-ratio: 4 / 3;
-      @media screen and (max-width: $breakpoint-tablet) {
-        font-size: 2rem;
-        min-width: 2.8rem;
-      }
     }
     &Title {
       display: flex;
       align-items: center;
-      font-weight: 700;
     }
     &Body {
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 1rem 1rem;
+      padding: .2rem 0;
       width: 100%;
       margin: 0 auto;
-      max-width: calc(0.8 * #{$breakpoint-laptop});
       overflow-y: hidden;
-      box-sizing: border-box;
       transition-duration: 500ms;
+      background-color: $gray-background;
       &_open {
-        max-height: 45rem;
+        max-height: 20rem;
         @media screen and (max-width: $breakpoint-tablet) {
-          padding: 1rem .5rem;
-          max-height: 80rem;
+          padding: .5rem 0;
+          max-height: 40rem;
         }
       }
       &_close {
@@ -95,33 +76,15 @@
       font-size: 2rem;
       background-color: transparent;
       border: none;
-      color: $blue-primary;
+      color: $white;
       cursor: pointer;
       transition-duration: 250ms;
-      @media screen and (max-width: $breakpoint-tablet) {
-        min-width: 3rem;
-      }
       &:hover {
-        color: $blue-hover;
+        color: $gray-background;
       }
       &_close {
         transform: rotate(90deg);
       }
-    }
-  }
-  &CallToAction {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-    &Question {
-      text-align: center;
-      color: $blue-primary;
-      font-size: 1.7rem;
-    }
-    &Button {
-      padding: .5rem 2rem;
-      font-size: 1.2rem;
     }
   }
 }

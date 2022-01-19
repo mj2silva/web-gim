@@ -13,9 +13,13 @@ export const DropdownContext = createContext<DropdownContextProps>({
   activeId: -1,
 });
 
-const DropDownProvider: FC = (props) => {
-  const { children } = props;
-  const dropdownState = useDropdown();
+interface Props {
+  defaultOpen?: number;
+}
+
+const DropDownProvider: FC<Props> = (props) => {
+  const { children, defaultOpen } = props;
+  const dropdownState = useDropdown({ defaultOpen });
 
   return (
     <DropdownContext.Provider value={dropdownState}>

@@ -8,6 +8,7 @@ import DropdownItem from "@components/Dropdown/DropdownItem";
 import { Service } from "@components/services/types";
 
 import styles from "@styles/Services.module.scss";
+import ServiceDetail from "@components/services/ServiceDetail";
 
 interface Props {
   service: Service;
@@ -44,7 +45,18 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
         closedClassName={styles.ServicesDropdownBody_close}
         openClassName={styles.ServicesDropdownBody_open}
       >
-        <div className={styles.ServiceDescription}>{service.description}</div>
+        <div className={styles.ServiceDescription}>
+          <p>{service.description}</p>
+        </div>
+        <ServiceDetail serviceDetail={service.detail} />
+        <div className={styles.ServicesCallToAction}>
+          <h2 className={styles.ServicesCallToActionQuestion}>
+            ¿DESEAS COTIZAR UN SERVICIO DE {service.title}?
+          </h2>
+          <button className={"button " + styles.ServicesCallToActionButton}>
+            Contactar
+          </button>
+        </div>
       </DropdownBody>
     </DropdownItem>
   );

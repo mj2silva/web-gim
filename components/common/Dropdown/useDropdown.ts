@@ -1,7 +1,11 @@
 import { useState } from "react";
 
-const useDropdown = () => {
-  const [activeId, setActiveId] = useState(-1);
+interface Props {
+  defaultOpen?: number;
+}
+
+const useDropdown = ({ defaultOpen = -1 }: Props) => {
+  const [activeId, setActiveId] = useState(defaultOpen);
   const openDropdown = (id: number) => {
     setActiveId(id);
   };
