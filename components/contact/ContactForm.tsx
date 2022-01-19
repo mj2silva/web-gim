@@ -22,7 +22,7 @@ const ContactForm: FC = () => {
       </div>
       <div className={styles.ContactFormElement}>
         <label>Mensaje</label>
-        <textarea rows={8} placeholder="Mensaje" />
+        <textarea rows={8} placeholder="Me interesa el servicio de..." />
       </div>
       <button type="submit" className={styles.ContactFormButton + " button"}>
         Contactar
