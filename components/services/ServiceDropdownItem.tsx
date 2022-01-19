@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from "next/image";
 
 import DropdownHeader from "@components/Dropdown/DropdownHeader";
 import SectionSubtitle from "@components/SectionSubtitle";
@@ -28,7 +29,14 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
       >
         <div className={styles.ServicesDropdownTitle}>
           <div className={styles.ServicesDropdownNumber}>{order}</div>
-          <div className={styles.ServicesDropdownIcon}>{service.icon}</div>
+          <div className={styles.ServicesDropdownIcon}>
+            <Image
+              src={service.icon}
+              alt={service.title}
+              layout="fill"
+              objectFit="scale-down"
+            />
+          </div>
           <div className={styles.ServicesDropdownName}>
             <SectionSubtitle title={service.title} />
           </div>
@@ -37,7 +45,12 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
           className={styles.ServicesDropdownButton}
           closedClassName={styles.ServicesDropdownButton_close}
         >
-          X
+          <Image
+            src="/img/flechas-grandes.png"
+            layout="fill"
+            objectFit="scale-down"
+            alt="icono-flechas"
+          />
         </DropdownButton>
       </DropdownHeader>
       <DropdownBody

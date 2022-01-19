@@ -13,12 +13,24 @@
       display: none;
     }
     & input {
-      background: url("/img/municipal.svg") no-repeat .5rem, $white;
-      background-size: 1.5rem;
+      background: url("/img/nombre.png") no-repeat .5rem, $white;
       width: 100%;
-      padding: .7rem 1rem .7rem 2.5rem;
+      padding: 1rem 1rem 1rem 2.5rem;
       position: relative;
       box-sizing: border-box;
+      border: solid 1px $gray;
+    }
+    & .input_name {
+      background: url("/img/nombre.png") no-repeat .5rem, $white;
+      background-size: 1.5rem;
+    }
+    & .input_email {
+      background: url("/img/correo.png") no-repeat .5rem, $white;
+      background-size: 1.5rem;
+    }
+    & .input_phone {
+      background: url("/img/telefono.png") no-repeat .5rem, $white;
+      background-size: 1.5rem;
     }
     & textarea {
       width: 100%;

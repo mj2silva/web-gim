@@ -10,19 +10,19 @@ const ContactForm: FC = () => {
     <form className={styles.ContactForm} onSubmit={handleSubmit}>
       <div className={styles.ContactFormElement}>
         <label>Nombre</label>
-        <input placeholder="Nombre" />
+        <input className={styles.input_name} placeholder="Nombre" />
       </div>
       <div className={styles.ContactFormElement}>
         <label>Email</label>
-        <input placeholder="Email" />
+        <input className={styles.input_email} placeholder="Email" />
       </div>
       <div className={styles.ContactFormElement}>
         <label>Teléfono</label>
-        <input placeholder="Teléfono" />
+        <input className={styles.input_phone} placeholder="Teléfono" />
       </div>
       <div className={styles.ContactFormElement}>
         <label>Mensaje</label>
-        <textarea rows={6} placeholder="Mensaje" />
+        <textarea rows={8} placeholder="Mensaje" />
       </div>
       <button type="submit" className={styles.ContactFormButton + " button"}>
         Contactar

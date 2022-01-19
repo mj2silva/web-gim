@@ -4,25 +4,25 @@ import { Benefit } from "@components/about-us/types";
 const benefits: Benefit[] = [
   {
     id: 1,
-    icon: "X",
+    icon: "/img/contrato.png",
     description:
       "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
   },
   {
     id: 2,
-    icon: "X",
+    icon: "/img/proceso.png",
     description:
       "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
   },
   {
     id: 3,
-    icon: "X",
+    icon: "/img/grupo.png",
     description:
       "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
   },
   {
     id: 4,
-    icon: "X",
+    icon: "/img/ahorro.png",
     description:
       "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
   },

@@ -11,7 +11,7 @@ const services: Service[] = [
     title: "GESTIÓN MUNICIPAL Y SANEAMIENTO FÍSICO LEGAL",
     description:
       "Se ocupa de guiar u orientar la detección y satisfacción de las necesidades de locales para su óptimo funcionamiento. El saneamiento  fisico legal de predios es la gestión destinada a la regularización de la documentación de la propiedad  del terreno en primer lugar, y luego de la construcción que se haya edificado sobre el predio (de ser el caso) con el objeto de obtener la titulación  o acreditación idonea.",
-    icon: "X",
+    icon: "/img/icon4.png",
     detail: [
       {
         title: "Ver nuestros servicios",
@@ -36,7 +36,7 @@ const services: Service[] = [
     title: "CONSTRUCCIÓN RETAIL",
     description:
       "Se ocupa de guiar u orientar la detección y satisfacción de las necesidades de locales para su óptimo funcionamiento. El saneamiento  fisico legal de predios es la gestión destinada a la regularización de la documentación de la propiedad  del terreno en primer lugar, y luego de la construcción que se haya edificado sobre el predio (de ser el caso) con el objeto de obtener la titulación  o acreditación idonea.",
-    icon: "X",
+    icon: "/img/icon5.png",
     detail: [
       {
         title: "Ver nuestros servicios",
@@ -61,7 +61,7 @@ const services: Service[] = [
     title: "MANTENIMIENTO RETAIL",
     description:
       "Se ocupa de guiar u orientar la detección y satisfacción de las necesidades de locales para su óptimo funcionamiento. El saneamiento  fisico legal de predios es la gestión destinada a la regularización de la documentación de la propiedad  del terreno en primer lugar, y luego de la construcción que se haya edificado sobre el predio (de ser el caso) con el objeto de obtener la titulación  o acreditación idonea.",
-    icon: "X",
+    icon: "/img/icon6.png",
     detail: [
       {
         title: "Ver nuestros servicios",

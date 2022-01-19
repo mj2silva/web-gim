@@ -18,9 +18,10 @@ const ServicesPresentation: FC = () => {
             <div className={styles.ServicesPresentationNumber}>1</div>
             <div className={styles.ServicesPresentationImage}>
               <Image
-                src="/img/municipal.svg"
+                src="/img/icon4.png"
                 alt="gestion-municipal"
                 layout="fill"
+                objectFit="contain"
               />
             </div>
           </div>
@@ -33,9 +34,10 @@ const ServicesPresentation: FC = () => {
             <div className={styles.ServicesPresentationNumber}>2</div>
             <div className={styles.ServicesPresentationImage}>
               <Image
-                src="/img/municipal.svg"
+                src="/img/icon5.png"
                 alt="gestion-municipal"
                 layout="fill"
+                objectFit="contain"
               />
             </div>
           </div>
@@ -49,8 +51,9 @@ const ServicesPresentation: FC = () => {
             <div className={styles.ServicesPresentationImage}>
               <Image
                 alt="gestion-municipal"
-                src="/img/municipal.svg"
+                src="/img/icon6.png"
                 layout="fill"
+                objectFit="contain"
               />
             </div>
           </div>

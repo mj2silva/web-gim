@@ -14,7 +14,7 @@
   &Dropdown {
     display: flex;
     width: 100%;
-    max-width: $breakpoint-laptop;
+    max-width: calc(0.8 * #{$breakpoint-laptop});
     flex-direction: column;
     &Item {
       border: 1px solid black;
@@ -53,10 +53,13 @@
       }
     }
     &Icon {
+      position: relative;
       font-size: 3rem;
-      min-width: 4rem;
+      min-width: 5rem;
       font-weight: bold;
       aspect-ratio: 4 / 3;
+      margin-right: 1rem;
+      box-sizing: border-box;
       @media screen and (max-width: $breakpoint-tablet) {
         font-size: 2rem;
         min-width: 2.8rem;
@@ -75,7 +78,7 @@
       padding: 1rem 1rem;
       width: 100%;
       margin: 0 auto;
-      max-width: calc(0.8 * #{$breakpoint-laptop});
+      max-width: calc(0.8 * 0.8 * #{$breakpoint-laptop});
       overflow-y: hidden;
       box-sizing: border-box;
       transition-duration: 500ms;
@@ -92,12 +95,15 @@
       }
     }
     &Button {
-      font-size: 2rem;
+      position: relative;
+      min-width: 3rem;
       background-color: transparent;
       border: none;
       color: $blue-primary;
       cursor: pointer;
       transition-duration: 250ms;
+      margin-left: 1rem;
+      transform: rotate(180deg);
       @media screen and (max-width: $breakpoint-tablet) {
         min-width: 3rem;
       }
@@ -105,7 +111,7 @@
         color: $blue-hover;
       }
       &_close {
-        transform: rotate(90deg);
+        transform: rotate(0);
       }
     }
   }
