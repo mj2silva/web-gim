@@ -103,6 +103,7 @@
       cursor: pointer;
       transition-duration: 250ms;
       margin-left: 1rem;
+      margin-right: 1rem;
       transform: rotate(180deg);
       @media screen and (max-width: $breakpoint-tablet) {
         min-width: 3rem;

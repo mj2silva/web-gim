@@ -14,7 +14,7 @@ interface Props {
 
 const ServiceDetail: FC<Props> = ({ serviceDetail }) => {
   return (
-    <Dropdown className={styles.ServiceDetail} defaultOpen={1}>
+    <Dropdown className={styles.ServiceDetail}>
       {serviceDetail?.map((item, index) => (
         <DropdownItem
           id={index + 1}
