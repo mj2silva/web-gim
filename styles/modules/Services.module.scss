@@ -82,11 +82,14 @@
       overflow-y: hidden;
       box-sizing: border-box;
       transition-duration: 500ms;
+      & p {
+        margin-top: 0;
+      }
       &_open {
-        max-height: 45rem;
+        max-height: 50rem;
         @media screen and (max-width: $breakpoint-tablet) {
           padding: 1rem .5rem;
-          max-height: 80rem;
+          max-height: 85rem;
         }
       }
       &_close {
@@ -125,6 +128,9 @@
       text-align: center;
       color: $blue-primary;
       font-size: 1.7rem;
+      @media screen and (max-width: $breakpoint-tablet) {
+        font-size: 1.4rem;
+      }
     }
     &Button {
       padding: .5rem 2rem;

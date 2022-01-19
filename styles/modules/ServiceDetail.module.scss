@@ -60,11 +60,14 @@
       overflow-y: hidden;
       transition-duration: 500ms;
       background-color: $gray-background;
+      & ol li {
+        margin-bottom: .5rem;
+      }
       &_open {
-        max-height: 20rem;
+        max-height: 25rem;
         @media screen and (max-width: $breakpoint-tablet) {
           padding: .5rem 0;
-          max-height: 40rem;
+          max-height: 45rem;
         }
       }
       &_close {
