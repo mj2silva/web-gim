@@ -90,8 +90,8 @@
       &_open {
         max-height: 50rem;
         @media screen and (max-width: $breakpoint-tablet) {
-          padding: 1rem 2rem;
-          max-height: 85rem;
+          padding: 1rem 2rem 2rem 2rem;
+          max-height: 100rem;
         }
       }
       &_close {

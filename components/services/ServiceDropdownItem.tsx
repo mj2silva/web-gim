@@ -67,7 +67,7 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
             ¿DESEAS COTIZAR UN SERVICIO DE {service.title}?
           </h2>
           <button className={"button " + styles.ServicesCallToActionButton}>
-            Contactar
+            Cotizar
           </button>
         </div>
       </DropdownBody>
