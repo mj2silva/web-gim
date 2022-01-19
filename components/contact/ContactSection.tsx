@@ -8,7 +8,7 @@ const ContactSection: FC = () => {
   return (
     <section className={styles.ContactSection}>
       <div className={styles.ContactSectionTitle}>
-        <SectionTitle text="Construyamos tu" highlightedText="nueva sede hoy" />
+        <SectionTitle text="Iniciemos tu " highlightedText="proyecto hoy" />
       </div>
       <div className={styles.ContactSectionBody}>
         <div className={styles.ContactSectionInfo}>
