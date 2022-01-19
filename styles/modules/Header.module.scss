@@ -76,8 +76,11 @@
     z-index: 99;
   }
   &Menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    right: 3rem;
+    right: 2rem;
     z-index: 9;
     height: 3rem;
     @media screen and (max-width: $breakpoint-tablet) {
