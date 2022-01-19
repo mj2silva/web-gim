@@ -84,6 +84,7 @@
       transition-duration: 500ms;
       & p {
         margin-top: 0;
+        text-align: justify;
       }
       &_open {
         max-height: 50rem;
