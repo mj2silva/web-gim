@@ -12,12 +12,11 @@ const formatPathName = (path: string): string => {
 };
 
 const HeaderBreadCrumb: FC = () => {
-  const { pathname } = useRouter();
-
+  const { asPath } = useRouter();
   return (
     <>
-      {pathname.toUpperCase().slice(1) && (
-        <div className={styles.HeaderPageName}>{formatPathName(pathname)}</div>
+      {asPath.toUpperCase().slice(1) && (
+        <div className={styles.HeaderPageName}>{formatPathName(asPath)}</div>
       )}
     </>
   );
