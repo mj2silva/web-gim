@@ -5,7 +5,12 @@ const FloatingButton: FC = () => {
   return (
     <div className="whatsapp">
       <div>
-        <Image src="/img/whatsapp.png" layout="fill" alt="whatsapp" />
+        <Image
+          src="/img/whatsapp.png"
+          layout="fill"
+          alt="whatsapp"
+          objectFit="scale-down"
+        />
       </div>
     </div>
   );
