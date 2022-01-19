@@ -11,8 +11,8 @@
     padding: 2rem 4rem;
     @media screen and (max-width: $breakpoint-tablet){
       flex-direction: column;
-      gap: 3rem;
-      padding: 2rem 2rem;
+      gap: 0;
+      padding: 3.5rem 2rem;
     }
   }
   &Logo {
@@ -55,6 +55,9 @@
   &SocialMedia {
     display: flex;
     gap: .5rem;
+    @media screen and (max-width: $breakpoint-tablet){
+      margin-top: 3rem;
+    }
   }
   &SocialMediaLogo {
     border-radius: 8px;
