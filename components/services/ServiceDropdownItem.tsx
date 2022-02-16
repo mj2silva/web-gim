@@ -27,30 +27,32 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
         className={styles.ServicesDropdownHeader}
         closeClassName={styles.ServicesDropdownHeader_close}
       >
-        <div className={styles.ServicesDropdownTitle}>
-          <div className={styles.ServicesDropdownNumber}>{order}</div>
-          <div className={styles.ServicesDropdownIcon}>
-            <Image
-              src={service.icon}
-              alt={service.title}
-              layout="fill"
-              objectFit="scale-down"
-            />
-          </div>
-          <div className={styles.ServicesDropdownName}>
-            <SectionSubtitle title={service.title} />
-          </div>
-        </div>
         <DropdownButton
           className={styles.ServicesDropdownButton}
           closedClassName={styles.ServicesDropdownButton_close}
         >
-          <Image
-            src="/img/flechas-grandes.png"
-            layout="fill"
-            objectFit="scale-down"
-            alt="icono-flechas"
-          />
+          <div className={styles.ServicesDropdownTitle}>
+            <div className={styles.ServicesDropdownNumber}>{order}</div>
+            <div className={styles.ServicesDropdownIcon}>
+              <Image
+                src={service.icon}
+                alt={service.title}
+                layout="fill"
+                objectFit="scale-down"
+              />
+            </div>
+            <div className={styles.ServicesDropdownName}>
+              <SectionSubtitle title={service.title} />
+            </div>
+          </div>
+          <div className={styles.ServicesDropdownButton_icon}>
+            <Image
+              src="/img/flechas-grandes.png"
+              layout="fill"
+              objectFit="scale-down"
+              alt="icono-flechas"
+            />
+          </div>
         </DropdownButton>
       </DropdownHeader>
       <DropdownBody

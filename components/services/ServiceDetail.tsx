@@ -7,6 +7,8 @@ import styles from "@styles/ServiceDetail.module.scss";
 import DropdownBody from "@components/Dropdown/DropdownBody";
 import DropdownButton from "@components/Dropdown/DropdownButton";
 import Dropdown from "@components/Dropdown/Dropdown";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 interface Props {
   serviceDetail: Service["detail"];
@@ -27,14 +29,16 @@ const ServiceDetail: FC<Props> = ({ serviceDetail }) => {
             closeClassName={styles.ServiceDetailDropdownHeader_close}
             openClassName={styles.ServiceDetailDropdownHeader_open}
           >
-            <div className={styles.ServiceDetailDropdownTitle}>
-              {item.title}
-            </div>
             <DropdownButton
               closedClassName={styles.ServiceDetailDropdownButton_close}
               className={styles.ServiceDetailDropdownButton}
             >
-              {">"}
+              <div className={styles.ServiceDetailDropdownTitle}>
+                {item.title}
+              </div>
+              <div className={styles.ServiceDetailDropdownButton_icon}>
+                <FontAwesomeIcon icon={faChevronRight} />
+              </div>
             </DropdownButton>
           </DropdownHeader>
           <DropdownBody

@@ -30,6 +30,7 @@
       box-sizing: border-box;
       justify-content: space-between;
       width: 100%;
+      transition-duration: 250ms;
       &_open {
 
       }
@@ -88,7 +89,7 @@
         text-align: justify;
       }
       &_open {
-        max-height: 50rem;
+        max-height: 60rem;
         @media screen and (max-width: $breakpoint-tablet) {
           padding: 1rem 2rem 2rem 2rem;
           max-height: 100rem;
@@ -101,23 +102,33 @@
     }
     &Button {
       position: relative;
-      min-width: 3rem;
       background-color: transparent;
       border: none;
+      width: 100%;
+      display: flex;
+      align-content: center;
+      align-items: center;
+      justify-content: space-between;
       color: $blue-primary;
       cursor: pointer;
       transition-duration: 250ms;
       margin-left: 1rem;
       margin-right: 1rem;
-      transform: rotate(180deg);
       @media screen and (max-width: $breakpoint-tablet) {
         min-width: 3rem;
       }
+      &_close > &_icon {
+        transform: rotate(0);
+      }
+      &_icon {
+        position: relative;
+        min-width: 3rem;
+        aspect-ratio: 1 / 1;
+        transform: rotate(180deg);
+        transition-duration: 250ms;
+      }
       &:hover {
         color: $blue-hover;
-      }
-      &_close {
-        transform: rotate(0);
       }
     }
   }
