@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import HeaderNav from "@components/Layout/Header/HeaderNav";
 import cn from "classnames";
 import HeaderBreadCrumb from "@components/Layout/Header/HeaderBreadCrumb";
+import Link from "next/link";
 
 const Header: FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -26,7 +27,11 @@ const Header: FC = () => {
   return (
     <header className={headerClassName}>
       <div className={styles.HeaderTitle}>
-        <GIMLogo className={styles.HeaderLogo} />
+        <Link href="/" passHref>
+          <a>
+            <GIMLogo className={styles.HeaderLogo} />
+          </a>
+        </Link>
         <HeaderBreadCrumb />
       </div>
       <HeaderNav

@@ -3,6 +3,8 @@ import Image from "next/image";
 
 import styles from "@styles/modules/Footer.module.scss";
 import GIMLogo from "@components/GIMLogo";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 const Footer: FC = () => {
   return (
@@ -29,8 +31,12 @@ const Footer: FC = () => {
             </div>
           </div>
           <div className={styles.FooterSocialMedia}>
-            <div className={styles.FooterSocialMediaLogo}>f</div>
-            <div className={styles.FooterSocialMediaLogo}>i</div>
+            <div className={styles.FooterSocialMediaLogo}>
+              <FontAwesomeIcon icon={faFacebookF} />
+            </div>
+            <div className={styles.FooterSocialMediaLogo}>
+              <FontAwesomeIcon icon={faInstagram} />
+            </div>
           </div>
         </div>
         <div className={styles.FooterFoot}>

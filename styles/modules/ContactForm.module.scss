@@ -6,6 +6,7 @@
   width: 100%;
   margin: 0 auto;
   gap: .8rem;
+  min-height: 25rem;
   &Element {
     width: 100%;
     position: relative;
@@ -32,6 +33,10 @@
       background: url("/img/telefono.png") no-repeat .5rem, $white;
       background-size: 1.5rem;
     }
+    & .input_error {
+      font-size: .8rem;
+      color: #d30000;
+    }
     & textarea {
       width: 100%;
       box-sizing: border-box;
@@ -45,5 +50,29 @@
     width: 10rem;
     margin: 0 auto;
     border-radius: 6px;
+  }
+  &SpinnerContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 25rem;
+  }
+  &Success {
+    min-height: 25rem;
+    color: green;
+    font-size: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    & > div {
+      font-size: 2rem;
+    }
+  }
+  &Error {
+    font-size: .8rem;
   }
 }

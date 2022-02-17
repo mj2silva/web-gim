@@ -131,3 +131,21 @@ main {
   background-color: green;
   z-index: 99;
 }
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  width: 2rem;
+  aspect-ratio: 1 / 1;
+  border: 5px solid $blue-primary;
+  border-top: 5px solid transparent;
+  border-radius: 50%;
+  animation: spin 800ms infinite linear;
+}
