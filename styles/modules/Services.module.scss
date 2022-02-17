@@ -49,6 +49,7 @@
     }
     &Name {
       font-size: 2rem;
+      text-align: left;
       @media screen and (max-width: $breakpoint-tablet) {
         font-size: .8rem;
       }
