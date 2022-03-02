@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "@styles/Header.module.scss";
 import { useRouter } from "next/router";
+// import Link from "next/link";
 
 const formatPathName = (path: string): string => {
   return path

@@ -9,6 +9,7 @@
   align-items: flex-start;
   box-sizing: border-box;
   min-height: 24rem;
+  font-family: $SourceSans3;
   gap: 2rem;
   @media screen and (max-width: $breakpoint-tablet) {
     padding: 0;

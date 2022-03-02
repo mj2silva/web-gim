@@ -22,6 +22,14 @@ const TeamCard: FC<Props> = ({ teamMember }) => {
             layout="fill"
             alt={teamMember.name}
           />
+          <div className={styles.TeamCardContactInfo}>
+            <span>Contacto:</span>
+            <span>
+              <a className="link--email" href={`mailto:${teamMember.email}`}>
+                {teamMember.email}
+              </a>
+            </span>
+          </div>
         </div>
         <div className={styles.TeamCardInfo}>
           <div className={styles.TeamCardTitle}>
@@ -31,10 +39,6 @@ const TeamCard: FC<Props> = ({ teamMember }) => {
             <p>{teamMember.description}</p>
           </div>
         </div>
-      </div>
-      <div className={styles.TeamCardContactInfo}>
-        <span>Contacto:</span>
-        <span>{teamMember.email}</span>
       </div>
     </div>
   );

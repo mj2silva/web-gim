@@ -24,7 +24,8 @@
     font-weight: 500;
     font-size: 1.2rem;
     & * {
-      font-weight: 500;
+      font-family: $SourceSans3;
+      font-weight: 700;
       margin: 0 .5rem;
     }
   }
@@ -39,6 +40,7 @@
     aspect-ratio: 6 / 5;
   }
   &Description {
+    font-family: $SourceSans3;
     & p {
       text-align: center;
     }

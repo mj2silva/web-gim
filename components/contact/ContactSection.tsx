@@ -14,15 +14,21 @@ const ContactSection: FC = () => {
         <div className={styles.ContactSectionInfo}>
           <div className={styles.ContactSectionInfoCard}>
             <h5>Dirección</h5>
-            <h5>Los Robles 123, Urb. Virgen de la puerta, Trujillo.</h5>
-            <a href="#" target="_blank" rel="noopener">
-              Cómo llegar {"->"}
+            <h5>Calle Monterosa 270. Of. 901</h5>
+            <a
+              href="https://goo.gl/maps/BhWmsWvL3rCv1Jh97"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Cómo llegar →
             </a>
           </div>
           <div className={styles.ContactSectionInfoCard}>
             <h5>Cinthia</h5>
             <h5>Tel. 981 292 644</h5>
-            <h5>hola@gim-peru.com</h5>
+            <h5>
+              <a href="mailto:informes@gim-peru.com">informes@gim-peru.com</a>
+            </h5>
           </div>
         </div>
         <div className={styles.ContactSectionForm}>

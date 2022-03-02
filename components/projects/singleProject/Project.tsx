@@ -1,7 +1,11 @@
-import { FC } from "react";
+import { FC, useState } from "react";
+import Link from "next/link";
+
 import styles from "@styles/ProjectPage.module.scss";
 import SectionSubtitle from "@components/SectionSubtitle";
 import ProjectImageSlider from "@components/projects/singleProject/ProjectImageSlider";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const images = [
   {
@@ -31,6 +35,13 @@ const images = [
 ];
 
 const Project: FC = () => {
+  const [showMore, setShowMore] = useState(false);
+  const icon = showMore ? faMinus : faPlus;
+
+  const handleShowMore = () => {
+    setShowMore((sm) => !sm);
+  };
+
   return (
     <section className={styles.Project}>
       <div className={styles.ProjectContainer}>
@@ -39,7 +50,13 @@ const Project: FC = () => {
           <div className={styles.ProjectTitle}>
             <SectionSubtitle title="Casa Villanueva" />
           </div>
-          <div className={styles.ProjectDescription}>
+          <div
+            className={styles.ProjectDescription}
+            style={{
+              maxHeight: showMore ? "initial" : "12rem",
+              overflow: "hidden",
+            }}
+          >
             <p>
               Somos profesionales dedicados al Servicios de la Gesti6n
               lnmobiliaria, Municipal y de Construcción, que asegura la apertura
@@ -69,10 +86,15 @@ const Project: FC = () => {
               registral y saneamiento fisico legal de sus locales comerciales.
             </p>
           </div>
+          <button onClick={handleShowMore} className={styles.ProjectPlus}>
+            <FontAwesomeIcon icon={icon} />
+          </button>
         </div>
       </div>
       <div className={styles.ProjectButton}>
-        <button className={"button"}>Ver más proyectos</button>
+        <Link href="/proyectos ">
+          <a className={"button"}>Ver más proyectos</a>
+        </Link>
       </div>
     </section>
   );
