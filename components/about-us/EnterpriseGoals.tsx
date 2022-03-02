@@ -15,12 +15,12 @@ const EnterpriseGoals: FC = () => {
             operativa de los mismos.
           </li>
           <li>
-            Desarrollar para nuestros clientes soluciones inmobiliaria
+            Desarrollar para nuestros clientes soluciones inmobiliarias
             trascendentes, creadas por un grupo de personas enfocado en la
             excelencia.
           </li>
           <li>
-            Mejorar de forma cuantificable los tiempos para la obtenci6n de las
+            Mejorar de forma cuantificable los tiempos para la obtención de las
             licencias y autorizaciones de las tiendas.
           </li>
           <li>Reducir los costos innecesarios.</li>
@@ -29,8 +29,8 @@ const EnterpriseGoals: FC = () => {
       <div className={styles.EnterpriseGoalsVision}>
         <SectionSubtitle title="Visión" />
         <p>
-          &quot;Ubicar a GIM-PERU SAC, como una empresa lider en el mercado de
-          la gesti6n inmobiliaria y municipal en el sector retail, reconocida
+          &quot;Ubicar a GIM-PERU SAC, como una empresa líder en el mercado de
+          la gestión inmobiliaria y municipal en el sector retail, reconocida
           como una empresa de gran prestigio, calidad y compromiso humano con
           nuestros clientes, por su capacidad de buscar constantemente ser el
           mejor aliado en solucionar integralmente la necesidad del mercado, con

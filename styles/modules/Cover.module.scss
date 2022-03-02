@@ -25,6 +25,9 @@
   aspect-ratio: 16 / 7;
   min-height: 40rem;
   box-sizing: border-box;
+  &Button {
+    max-width: 10rem;
+  }
   &Images {
     position: relative;
     z-index: 1;

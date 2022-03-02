@@ -1,6 +1,6 @@
 import { FC } from "react";
 import Image from "next/image";
-
+import Link from "next/link";
 import styles from "@styles/OurTeam.module.scss";
 import SectionSubtitle from "@components/SectionSubtitle";
 
@@ -13,8 +13,8 @@ const OurTeam: FC = () => {
         </div>
         <div className={styles.OurTeamDescription}>
           <p>
-            Somos profesionales dedicados al Servicios de la Gesti6n
-            lnmobiliaria, Municipal y de Construcción, que asegura la apertura
+            Somos profesionales dedicados al Servicios de la Gestión
+            Inmobiliaria, Municipal y de Construcción, que asegura la apertura
             de sus edificaciones comerciales y/o cualquier otro producto que su
             entidad requiera.
           </p>
@@ -27,9 +27,11 @@ const OurTeam: FC = () => {
             y saneamiento fisico legal de sus locales comerciales.
           </p>
         </div>
-        <button className={"button " + styles.OurTeamButton}>
-          Ver equipo completo
-        </button>
+        <Link href="/nosotros/nuestro-equipo" passHref>
+          <a className={"button " + styles.OurTeamButton}>
+            Ver equipo completo
+          </a>
+        </Link>
       </div>
       <div className={styles.OurTeamPhoto}>
         <div className={styles.OurTeamImage}>

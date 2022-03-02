@@ -13,21 +13,21 @@ const values: Value[] = [
     id: 2,
     name: "Comporomiso",
     description:
-      "Reconocemos el esfuerzo y compromiso de nuestros colaboradores y brindamos oportunidades de desarrollo personal y profesional.",
+      "Cumplimos con los servicios que ofrecemos y aceptamos las metas y estrategias de nuestros clientes como algo propio.",
     icon: "/img/acuerdo.png",
   },
   {
     id: 3,
     name: "Exigencia",
     description:
-      "Reconocemos el esfuerzo y compromiso de nuestros colaboradores y brindamos oportunidades de desarrollo personal y profesional.",
+      "Brindamos lo mejor de nosotros para atender a nuestros clientes, trabajando en equipo y esforzándonos en ser mejores cada día.",
     icon: "/img/lider.png",
   },
   {
     id: 4,
     name: "Vocación de servicio",
     description:
-      "Reconocemos el esfuerzo y compromiso de nuestros colaboradores y brindamos oportunidades de desarrollo personal y profesional.",
+      "Disfrutamos de los servicios que realizamos y brindamos respuesta a las necesidades de nuestros clientes de forma oportuna, amable y efectiva.",
     icon: "/img/call.png",
   },
   {

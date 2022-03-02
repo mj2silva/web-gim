@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 import DropdownHeader from "@components/Dropdown/DropdownHeader";
@@ -68,9 +69,11 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
           <h2 className={styles.ServicesCallToActionQuestion}>
             ¿DESEAS COTIZAR UN SERVICIO DE {service.title}?
           </h2>
-          <button className={"button " + styles.ServicesCallToActionButton}>
-            Cotizar
-          </button>
+          <Link href="/contacto" passHref>
+            <a className={"button " + styles.ServicesCallToActionButton}>
+              Cotizar
+            </a>
+          </Link>
         </div>
       </DropdownBody>
     </DropdownItem>

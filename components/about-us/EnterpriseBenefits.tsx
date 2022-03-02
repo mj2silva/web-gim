@@ -12,19 +12,18 @@ const benefits: Benefit[] = [
     id: 2,
     icon: "/img/proceso.png",
     description:
-      "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
+      "Proveemos soluciones integrales y eficientes de nuestros proyectos a cargo, buscando la satisfacción del cliente, y la continuidad operativa de los mismos.",
   },
   {
     id: 3,
     icon: "/img/grupo.png",
     description:
-      "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
+      "Desarrollamos para nuestros clientes soluciones inmobiliarias trascendentes, creadas por un grupo de personas enfocado en la excelencia.",
   },
   {
     id: 4,
     icon: "/img/ahorro.png",
-    description:
-      "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
+    description: "Reducimos los costos innecesarios.",
   },
 ];
 

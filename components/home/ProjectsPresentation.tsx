@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import SectionTitle from "@components/SectionTitle";
 
@@ -42,9 +43,11 @@ const ProjectsPresentation: FC = () => {
           </div>
         </div>
       </CarouselProvider>
-      <button className={styles.ProjectsPresentationButton + " button"}>
-        Ver más proyectos
-      </button>
+      <Link href="/proyectos" passHref>
+        <a className={styles.ProjectsPresentationButton + " button"}>
+          Ver más proyectos
+        </a>
+      </Link>
     </section>
   );
 };
