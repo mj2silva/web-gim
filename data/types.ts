@@ -4,3 +4,8 @@ export interface ContactData {
   phoneNumber: string;
   message: string;
 }
+
+export type Slide = {
+  id: string;
+  url: string;
+}

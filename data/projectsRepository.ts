@@ -1,10 +1,7 @@
 import {
     collection,
-    doc,
-    getDoc,
     getDocs,
     limit,
-    orderBy,
     QueryConstraint,
     query
 } from "firebase/firestore";

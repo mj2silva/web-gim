@@ -5,25 +5,24 @@ import Link from "next/link";
 import cn from "classnames";
 import CoverCarouselImage from "@components/home/Cover/CoverCarouselImage";
 import CoverCarouselControl from "@components/home/Cover/CoverCarouselControl";
+import { Slide } from "data/types";
 
-const images = [
-  {
-    url: "/img/portada.jpg",
-  },
-];
+type Props = {
+  slides: Slide[];
+}
 
-const Cover: FC = () => {
+const Cover: FC<Props> = ({slides}) => {
   return (
-    <CarouselProvider totalPages={images.length} autoPlay intervalTime={5000}>
+    <CarouselProvider totalPages={slides.length} autoPlay intervalTime={5000}>
       <div className={styles.Cover}>
         <div className={styles.CoverImages}>
-          {images.map((image, index) => (
+          {slides.map((slide, index) => (
             <CoverCarouselImage
-              key={image.url}
+              key={slide.url}
               imagePage={index}
-              src={image.url}
+              src={slide.url}
               layout="fill"
-              alt={image.url}
+              alt={slide.url}
               objectFit="cover"
               objectPosition="right"
             />
@@ -36,8 +35,8 @@ const Cover: FC = () => {
           </Link>
         </div>
         <div className={styles.CoverControls}>
-          {images.map((_, index) => (
-            <CoverCarouselControl key={_.url} buttonPage={index} />
+          {slides.map((slide, index) => (
+            <CoverCarouselControl key={slide.url} buttonPage={index} />
           ))}
         </div>
       </div>
