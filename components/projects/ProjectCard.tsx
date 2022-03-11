@@ -10,16 +10,15 @@ interface Props {
 
 const ProjectCard: FC<Props> = ({ project }) => {
   return (
-    <Link href="/proyectos/casa-villanueva" passHref>
+    <Link href={`/proyectos/${project.slug}`} passHref>
       <a className={styles.ProjectCard}>
         <div className={styles.ProjectCardImage}>
-          <Image src={project.pictureUrl} alt={project.name} layout="fill" />
+          <Image src={project.coverImage} alt={project.title} layout="fill" />
         </div>
         <div className={styles.ProjectCardInfo}>
           <h4 className={styles.ProjectCardName}>
-            {project.name.toUpperCase()}
+            {project.title.toUpperCase()}
           </h4>
-          <h6 className={styles.ProjectCardLocation}>{project.location}</h6>
         </div>
       </a>
     </Link>

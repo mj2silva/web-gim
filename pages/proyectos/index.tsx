@@ -1,10 +1,26 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import CoverPicture from "@components/CoverPicture";
 import ProjectCards from "@components/projects/ProjectCards";
 import ContactSection from "@components/contact/ContactSection";
 import Head from "next/head";
+import { Project } from "@components/projects/types";
+import { getProjects } from "data/projectsRepository";
 
-const Servicios: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const projects = await getProjects();
+  return {
+    props: {
+      projects,
+    },
+    revalidate: 1000,
+  }
+};
+
+type Props = {
+  projects: Project[];
+}
+
+const Servicios: NextPage<Props> = ({projects}) => {
   return (
     <>
       <Head>
@@ -16,7 +32,7 @@ const Servicios: NextPage = () => {
           objectPosition="bottom"
           objectFit="cover"
         />
-        <ProjectCards />
+        <ProjectCards projects={projects} />
         <ContactSection />
       </main>
     </>

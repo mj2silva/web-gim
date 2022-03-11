@@ -5,8 +5,13 @@ import SectionTitle from "@components/SectionTitle";
 
 import styles from "@styles/modules/ProjectsPresentation.module.scss";
 import CarouselProvider from "@components/Caroussel/CarouselContext";
+import { Project } from "@components/projects/types";
 
-const ProjectsPresentation: FC = () => {
+type Props = {
+  projects: Project[];
+}
+
+const ProjectsPresentation: FC<Props> = ({projects}) => {
   return (
     <section className={styles.ProjectsPresentation}>
       <div className={styles.ProjectsPresentationTitle}>
@@ -15,24 +20,21 @@ const ProjectsPresentation: FC = () => {
       <CarouselProvider totalPages={1}>
         <div className={styles.ProjectsPresentationCarousel}>
           <div className={styles.ProjectsPresentationItems}>
-            <div
-              className={
-                styles.ProjectsPresentationItem +
-                " " +
-                styles.ProjectsPresentationItem_first
-              }
-            >
-              <Image alt="oxxo" src="/img/oxxo-color.jpg" layout="fill" />
-            </div>
-            <div
-              className={
-                styles.ProjectsPresentationItem +
-                " " +
-                styles.ProjectsPresentationItem_second
-              }
-            >
-              <Image alt="tambo" src="/img/tambo-color.jpg" layout="fill" />
-            </div>
+            {
+              projects.map((project) => (
+                <Link href={`/proyectos/${project.slug}`} passHref key={project.id}>
+                  <a
+                    className={
+                      styles.ProjectsPresentationItem +
+                      " " +
+                      styles.ProjectsPresentationItem_first
+                    }
+                  >
+                    <Image alt={project.title} src={project.coverImage} layout="fill" />
+                  </a>
+                </Link>
+              ))
+            }
           </div>
           <div className={styles.ProjectsPresentationControlsContainer}>
             <div className={styles.ProjectsPresentationDecorator_left} />

@@ -1,4 +1,4 @@
-import type { NextPage } from "next";
+import type { GetStaticProps, NextPage } from "next";
 import Cover from "@components/home/Cover/Cover";
 import Presentation from "@components/home/Presentation";
 import ServicesPresentation from "@components/home/ServicesPresentation";
@@ -6,8 +6,25 @@ import ProjectsPresentation from "@components/home/ProjectsPresentation";
 import HighLights from "@components/home/HighLights";
 import ContactSection from "@components/contact/ContactSection";
 import Head from "next/head";
+import { getProjects } from "data/projectsRepository";
+import { Project } from "@components/projects/types";
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async () => {
+  const projects = await getProjects({limit: 2});
+  return {
+    props: {
+      projects,
+    },
+    revalidate: 1000,
+  }
+};
+
+type Props = {
+  projects: Project[];
+}
+
+const Home: NextPage<Props> = ({ projects }) => {
+
   return (
     <>
       <Head>
@@ -17,7 +34,7 @@ const Home: NextPage = () => {
         <Cover />
         <Presentation />
         <ServicesPresentation />
-        <ProjectsPresentation />
+        <ProjectsPresentation projects={projects} />
         <HighLights />
         <ContactSection />
       </main>
