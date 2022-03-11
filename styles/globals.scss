@@ -110,6 +110,31 @@ main {
   height: 100%;
 }
 
+.modal-button {
+  cursor: pointer;
+}
+
+.modal-overlay {
+  z-index: 99999;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(77, 77, 77, 0.59);
+}
+
+.modal-portal {
+  z-index: 99999;
+  width: 100vw;
+  height: 100vh;
+}
+
+.ReactModal__Content {
+  z-index: 99999;
+}
+
 .whatsapp {
   position: sticky;
   bottom: 20px;
@@ -123,16 +148,6 @@ main {
   transform: scale(0.9);
   &:hover {
     transform: scale(1);
-  }
-  @media screen and (max-width: $breakpoint-tablet){
-    margin: -2.25rem auto;
-    left: 0;
-    right: 0;
-    float: none;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    justify-content: center;
   }
 }
 

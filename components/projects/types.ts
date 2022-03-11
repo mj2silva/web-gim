@@ -3,6 +3,6 @@ export interface Project {
   title: string;
   coverImage: string;
   images?: string[];
-  text?: string;
+  text?: string[];
   slug: string;
 }

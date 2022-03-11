@@ -58,6 +58,7 @@
   cursor: pointer;
   transition-duration: 250ms;
   overflow: hidden;
+    will-change: transform;
   &:before {
     transition-duration: 250ms;
     content: '';

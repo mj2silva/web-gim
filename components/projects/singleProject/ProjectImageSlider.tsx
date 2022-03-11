@@ -1,6 +1,8 @@
 import { FC } from "react";
 import styles from "@styles/ImageSlider.module.scss";
 import Image from "next/image";
+import ModalButton from "@components/ImageSlider/Modal";
+import ImageSlider from "@components/ImageSlider/ImageSlider";
 
 interface Props {
   className?: string;
@@ -15,12 +17,14 @@ const ProjectImageSlider: FC<Props> = ({ className, images }) => {
     <div className={className}>
       <div className={styles.ImageSlider}>
         <div className={styles.ImageSliderMain}>
-          <Image
-            src={images[0].src}
-            layout="fill"
-            alt="Casa Villanueva"
-            objectFit="cover"
-          />
+          <ModalButton modalComponent={<ImageSlider images={images} />}>
+            <Image
+              src={images[0].src}
+              layout="fill"
+              alt="Casa Villanueva"
+              objectFit="cover"
+            />
+          </ModalButton>
         </div>
         <div className={styles.ImageSliderSecondaryGrid}>
           {images.slice(1).map((image) => (
