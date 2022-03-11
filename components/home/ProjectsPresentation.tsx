@@ -31,7 +31,7 @@ const ProjectsPresentation: FC = () => {
                 styles.ProjectsPresentationItem_second
               }
             >
-              <Image alt="oxxo" src="/img/tambo-color.jpg" layout="fill" />
+              <Image alt="tambo" src="/img/tambo-color.jpg" layout="fill" />
             </div>
           </div>
           <div className={styles.ProjectsPresentationControlsContainer}>
