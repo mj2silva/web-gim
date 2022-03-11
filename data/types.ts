@@ -4,3 +4,7 @@ export interface ContactData {
   phoneNumber: string;
   message: string;
 }
+
+export interface Project {
+  
+}
