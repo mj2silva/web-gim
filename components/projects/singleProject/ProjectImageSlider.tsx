@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "@styles/ImageSlider.module.scss";
 import Image from "next/image";
-import ModalButton from "@components/ImageSlider/Modal";
+import ModalButton from "@components/ImageSlider/ModalButton";
 import ImageSlider from "@components/ImageSlider/ImageSlider";
 
 interface Props {

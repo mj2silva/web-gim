@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { FC, ReactNode, useState } from "react";
 import ReactModal from "react-modal";
+import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 ReactModal.setAppElement("#__next");
 
@@ -31,6 +33,9 @@ const ModalButton: FC<Props> = (props) => {
         preventScroll
         overlayClassName="modal-overlay"
       >
+        <button className="modal-close" onClick={onCloseModal}>
+          <FontAwesomeIcon icon={faTimes} />
+        </button>
         {modalComponent}
       </ReactModal>
     </div>
