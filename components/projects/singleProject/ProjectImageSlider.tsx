@@ -15,30 +15,30 @@ interface Props {
 const ProjectImageSlider: FC<Props> = ({ className, images }) => {
   return (
     <div className={className}>
-      <div className={styles.ImageSlider}>
-        <div className={styles.ImageSliderMain}>
-          <ModalButton modalComponent={<ImageSlider images={images} />}>
+      <ModalButton modalComponent={<ImageSlider images={images} />}>
+        <div className={styles.ImageSlider}>
+          <div className={styles.ImageSliderMain}>
             <Image
               src={images[0].src}
               layout="fill"
               alt="Casa Villanueva"
               objectFit="cover"
             />
-          </ModalButton>
+          </div>
+          <div className={styles.ImageSliderSecondaryGrid}>
+            {images.slice(1).map((image) => (
+              <div key={image.src} className={styles.ImageSliderSecondary}>
+                <Image
+                  src={image.src}
+                  layout="fill"
+                  alt="Casa Villanueva"
+                  objectFit="cover"
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className={styles.ImageSliderSecondaryGrid}>
-          {images.slice(1).map((image) => (
-            <div key={image.src} className={styles.ImageSliderSecondary}>
-              <Image
-                src={image.src}
-                layout="fill"
-                alt="Casa Villanueva"
-                objectFit="cover"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      </ModalButton>
     </div>
   );
 };

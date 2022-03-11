@@ -112,6 +112,15 @@ main {
 
 .modal-button {
   cursor: pointer;
+  width: 100%;
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  &:active {
+    border: none;
+    outline: none;
+  }
 }
 
 .modal-overlay {
