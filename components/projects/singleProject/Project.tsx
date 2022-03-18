@@ -1,5 +1,6 @@
 import { FC, useState } from "react";
 import Link from "next/link";
+import cn from "classnames";
 
 import styles from "@styles/ProjectPage.module.scss";
 import SectionSubtitle from "@components/SectionSubtitle";
@@ -15,6 +16,9 @@ interface Props {
 const Project: FC<Props> = ({ project }) => {
   const [showMore, setShowMore] = useState(false);
   const icon = showMore ? faMinus : faPlus;
+  const descriptionClassName = cn(styles.ProjectDescription, {
+    [styles.ProjectDescription_closed]: !showMore,
+  });
 
   const handleShowMore = () => {
     setShowMore((sm) => !sm);
@@ -40,7 +44,7 @@ const Project: FC<Props> = ({ project }) => {
             <SectionSubtitle title={project.title} />
           </div>
           <div
-            className={styles.ProjectDescription}
+            className={descriptionClassName}
             style={{
               maxHeight: showMore ? "initial" : "12rem",
               overflow: "hidden",
