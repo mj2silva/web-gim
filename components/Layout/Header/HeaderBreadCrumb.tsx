@@ -1,15 +1,33 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import styles from "@styles/Header.module.scss";
+import Link from "next/link";
 import { useRouter } from "next/router";
-// import Link from "next/link";
 
-const formatPathName = (path: string): string => {
+const formatPathName = (path: string): ReactNode[] => {
   return path
     .toUpperCase()
     .split("/")
-    .map((item) => item.replace("-", " "))
     .slice(1)
-    .join(" > ");
+    .map((item, index) => {
+      return index === 0 ? (
+        <Link href={`/${item.toLowerCase()}`} passHref>
+          <a>{item.replace("-", " ")}</a>
+        </Link>
+      ) : (
+        <>
+          {" > "}
+          <Link
+            href={`/${path
+              .split("/")
+              .slice(0, index + 2)
+              .join("/")}`}
+            passHref
+          >
+            <a>{item.replace("-", " ")}</a>
+          </Link>
+        </>
+      );
+    });
 };
 
 const HeaderBreadCrumb: FC = () => {

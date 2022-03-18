@@ -28,6 +28,14 @@
   &PageName {
     border-left: solid 4px $blue-primary;
     padding: .3rem .9rem;
+    & a {
+      text-decoration: none;
+      color: $blue-primary;
+      &:hover {
+        color: $blue-hover;
+        text-decoration: underline;
+      }
+    }
     @media screen and (max-width: $breakpoint-tablet){
       display: none;
     }
