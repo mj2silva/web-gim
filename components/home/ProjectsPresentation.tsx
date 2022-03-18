@@ -9,9 +9,9 @@ import { Project } from "@components/projects/types";
 
 type Props = {
   projects: Project[];
-}
+};
 
-const ProjectsPresentation: FC<Props> = ({projects}) => {
+const ProjectsPresentation: FC<Props> = ({ projects }) => {
   return (
     <section className={styles.ProjectsPresentation}>
       <div className={styles.ProjectsPresentationTitle}>
@@ -20,21 +20,29 @@ const ProjectsPresentation: FC<Props> = ({projects}) => {
       <CarouselProvider totalPages={1}>
         <div className={styles.ProjectsPresentationCarousel}>
           <div className={styles.ProjectsPresentationItems}>
-            {
-              projects.map((project) => (
-                <Link href={`/proyectos/${project.slug}`} passHref key={project.id}>
-                  <a
-                    className={
-                      styles.ProjectsPresentationItem +
-                      " " +
-                      styles.ProjectsPresentationItem_first
-                    }
-                  >
-                    <Image alt={project.title} src={project.coverImage} layout="fill" />
-                  </a>
-                </Link>
-              ))
-            }
+            {projects.map((project, index) => (
+              <Link
+                href={`/proyectos/${project.slug}`}
+                passHref
+                key={project.id}
+              >
+                <a
+                  className={
+                    styles.ProjectsPresentationItem +
+                    " " +
+                    (index % 2 === 0
+                      ? styles.ProjectsPresentationItem_second
+                      : styles.ProjectsPresentationItem_first)
+                  }
+                >
+                  <Image
+                    alt={project.title}
+                    src={project.coverImage}
+                    layout="fill"
+                  />
+                </a>
+              </Link>
+            ))}
           </div>
           <div className={styles.ProjectsPresentationControlsContainer}>
             <div className={styles.ProjectsPresentationDecorator_left} />
