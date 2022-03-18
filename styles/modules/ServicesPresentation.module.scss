@@ -23,6 +23,12 @@
     align-items: center;
     justify-content: center;
     border-bottom: 12px solid $blue-primary;
+    text-decoration: none;
+    color: black;
+    transition-duration: 250ms;
+    &:hover {
+      transform: scale(1.1);
+    }
   }
   &Info {
     display: flex;

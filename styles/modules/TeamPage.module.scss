@@ -41,6 +41,9 @@
   }
   &Info {
     width: 100%;
+    @media screen and (max-width: $breakpoint-laptop){
+      margin-top: 2rem;
+    }
   }
   &Picture {
     position: relative;
