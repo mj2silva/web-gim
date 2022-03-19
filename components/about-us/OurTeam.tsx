@@ -23,7 +23,7 @@ const OurTeam: FC = () => {
             reconocemos la única oportunidad para gestionar eficientemente los
             expedientes de licencias de obra, licencias de funcionamiento,
             autorizaci6n de anuncios, asesorias para inspecciones de INDECI,
-            conformidad de obra y declaratoria de fábrica, Inscripci6n registral
+            conformidad de obra y declaratoria de fábrica, Inscripción registral
             y saneamiento fisico legal de sus locales comerciales.
           </p>
         </div>

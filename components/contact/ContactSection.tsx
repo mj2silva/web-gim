@@ -24,7 +24,7 @@ const ContactSection: FC = () => {
             </a>
           </div>
           <div className={styles.ContactSectionInfoCard}>
-            <h5>Cinthia</h5>
+            <h5>Lys Reátegui</h5>
             <h5>
               Tel. <a href="tel:992613992">992 613 992</a>
             </h5>

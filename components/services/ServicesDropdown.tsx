@@ -4,6 +4,7 @@ import styles from "@styles/Services.module.scss";
 import Dropdown from "@components/Dropdown/Dropdown";
 import { Service } from "@components/services/types";
 import ServiceDropdownItem from "@components/services/ServiceDropdownItem";
+import { useRouter } from "next/router";
 
 const services: Service[] = [
   {
@@ -87,15 +88,18 @@ const services: Service[] = [
 ];
 
 const ServicesDropdown: FC = () => {
+  const { asPath } = useRouter();
+  const hash = asPath.split("#")[1];
   return (
     <section className={styles.Services}>
-      <Dropdown className={styles.ServicesDropdown} defaultOpen={1}>
+      <Dropdown
+        className={styles.ServicesDropdown}
+        defaultOpen={hash ? Number.parseInt(hash) : 1}
+      >
         {services.map((service, index) => (
-          <ServiceDropdownItem
-            key={service.id}
-            service={service}
-            order={index + 1}
-          />
+          <div key={service.id} id={service.id.toString()}>
+            <ServiceDropdownItem service={service} order={index + 1} />
+          </div>
         ))}
       </Dropdown>
     </section>

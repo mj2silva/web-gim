@@ -31,11 +31,11 @@ const formatPathName = (path: string): ReactNode[] => {
 };
 
 const HeaderBreadCrumb: FC = () => {
-  const { asPath } = useRouter();
+  const { pathname } = useRouter();
   return (
     <>
-      {asPath.toUpperCase().slice(1) && (
-        <div className={styles.HeaderPageName}>{formatPathName(asPath)}</div>
+      {pathname.toUpperCase().slice(1) && (
+        <div className={styles.HeaderPageName}>{formatPathName(pathname)}</div>
       )}
     </>
   );

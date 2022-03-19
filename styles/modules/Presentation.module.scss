@@ -20,7 +20,7 @@
   background-size: 35%, 25%, 24%, 35%, 25%, 24%;
   @media screen and (max-width: $breakpoint-tablet) {
     padding-top: 6rem;
-    background-size: 140%, 110%, 130%, 0, 0, 0;
+    background: $gray-background;
     &::after {
       content: "";
       position: absolute;

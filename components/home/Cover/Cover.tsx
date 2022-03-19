@@ -9,14 +9,28 @@ import { Slide } from "data/types";
 
 type Props = {
   slides: Slide[];
-}
+  slidesMobile: Slide[];
+};
 
-const Cover: FC<Props> = ({slides}) => {
+const Cover: FC<Props> = ({ slides, slidesMobile }) => {
   return (
     <CarouselProvider totalPages={slides.length} autoPlay intervalTime={5000}>
       <div className={styles.Cover}>
         <div className={styles.CoverImages}>
           {slides.map((slide, index) => (
+            <CoverCarouselImage
+              key={slide.url}
+              imagePage={index}
+              src={slide.url}
+              layout="fill"
+              alt={slide.url}
+              objectFit="cover"
+              objectPosition="right"
+            />
+          ))}
+        </div>
+        <div className={styles.CoverImages_mobile}>
+          {slidesMobile.map((slide, index) => (
             <CoverCarouselImage
               key={slide.url}
               imagePage={index}

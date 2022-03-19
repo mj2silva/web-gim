@@ -32,11 +32,13 @@ const ServicesPresentation: FC = () => {
         />
       </div>
       <div className={styles.ServicesPresentationCards}>
-        {services.map((service) => (
-          <Link key={service.name} href="/servicios" passHref>
-            <a href="#" className={styles.ServicesPresentationCard}>
+        {services.map((service, index) => (
+          <Link key={service.name} href={`/servicios#${index + 1}`} passHref>
+            <a className={styles.ServicesPresentationCard}>
               <div className={styles.ServicesPresentationInfo}>
-                <div className={styles.ServicesPresentationNumber}>1</div>
+                <div className={styles.ServicesPresentationNumber}>
+                  {index + 1}
+                </div>
                 <div className={styles.ServicesPresentationImage}>
                   <Image
                     src={service.src}

@@ -8,34 +8,37 @@ import ContactSection from "@components/contact/ContactSection";
 import Head from "next/head";
 import { getProjects } from "data/projectsRepository";
 import { Project } from "@components/projects/types";
-import { getSlidesHome } from "data/slidesRepository";
+import { getSlidesHome, getSlidesMobile } from "data/slidesRepository";
 import { Slide } from "data/types";
 
 export const getStaticProps: GetStaticProps = async () => {
-  const projects = await getProjects({limit: 2});
+  const projects = await getProjects({ limit: 2 });
   const slidesHome = await getSlidesHome();
+  const slidesMobile = await getSlidesMobile();
   return {
     props: {
       projects,
       slidesHome,
+      slidesMobile,
     },
     revalidate: 1000,
-  }
+  };
 };
 
 type Props = {
   projects: Project[];
   slidesHome: Slide[];
-}
+  slidesMobile: Slide[];
+};
 
-const Home: NextPage<Props> = ({ projects, slidesHome }) => {
+const Home: NextPage<Props> = ({ projects, slidesHome, slidesMobile }) => {
   return (
     <>
       <Head>
         <title>Home | GIM</title>
       </Head>
       <main>
-        <Cover slides={slidesHome} />
+        <Cover slides={slidesHome} slidesMobile={slidesMobile} />
         <Presentation />
         <ServicesPresentation />
         <ProjectsPresentation projects={projects} />
