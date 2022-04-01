@@ -41,7 +41,7 @@ const navigationObject: NavigationObject[] = [
     items: [
       {
         href: "/nosotros",
-        title: "¿QUIENES SOMOS?",
+        title: "¿QUIÉNES SOMOS?",
         type: "link",
       },
       {

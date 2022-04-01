@@ -31,23 +31,20 @@ const Cover: FC<Props> = ({ slides, slidesMobile }) => {
         </div>
         <div className={styles.CoverImages_mobile}>
           {slidesMobile.map((slide, index) => (
-            <CoverCarouselImage
-              key={slide.url}
-              imagePage={index}
-              src={slide.url}
-              layout="fill"
-              alt={slide.url}
-              objectFit="cover"
-              objectPosition="right"
-            />
+            <>
+              <CoverCarouselImage
+                key={slide.url}
+                imagePage={index}
+                src={slide.url}
+                layout="fill"
+                alt={slide.url}
+                objectFit="cover"
+                objectPosition="right"
+              />
+            </>
           ))}
         </div>
-        <div className={styles.CoverIntro}>
-          <h1>ESPECIALISTAS EN CONSTRUCCIÓN RETAIL</h1>
-          <Link href="/servicios" passHref>
-            <a className={cn("button", styles.CoverButton)}>Conoce más</a>
-          </Link>
-        </div>
+
         <div className={styles.CoverControls}>
           {slides.map((slide, index) => (
             <CoverCarouselControl key={slide.url} buttonPage={index} />

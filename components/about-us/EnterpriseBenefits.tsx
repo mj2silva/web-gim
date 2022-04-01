@@ -6,7 +6,7 @@ const benefits: Benefit[] = [
     id: 1,
     icon: "/img/contrato.png",
     description:
-      "Mejoramos de forma cuantificable los tiempos para la obtenci6n de las licencias y autorizaciones municipales de su negocio.",
+      "Mejoramos de forma cuantificable los tiempos para la obtención de las licencias y autorizaciones municipales de su negocio.",
   },
   {
     id: 2,

@@ -10,14 +10,18 @@ const formatPathName = (path: string): ReactNode[] => {
     .slice(1)
     .map((item, index) => {
       return index === 0 ? (
-        <Link href={`/${item.toLowerCase()}`} passHref>
+        <Link
+          key={item.toLowerCase() + index}
+          href={`/${item.toLowerCase()}`}
+          passHref
+        >
           <a>{item.replace("-", " ")}</a>
         </Link>
       ) : (
-        <>
+        <span key={item.toLowerCase() + index}>
           {" > "}
           <Link
-            href={`/${path
+            href={`${path
               .split("/")
               .slice(0, index + 2)
               .join("/")}`}
@@ -25,17 +29,17 @@ const formatPathName = (path: string): ReactNode[] => {
           >
             <a>{item.replace("-", " ")}</a>
           </Link>
-        </>
+        </span>
       );
     });
 };
 
 const HeaderBreadCrumb: FC = () => {
-  const { pathname } = useRouter();
+  const { pathname, asPath } = useRouter();
   return (
     <>
       {pathname.toUpperCase().slice(1) && (
-        <div className={styles.HeaderPageName}>{formatPathName(pathname)}</div>
+        <div className={styles.HeaderPageName}>{formatPathName(asPath)}</div>
       )}
     </>
   );

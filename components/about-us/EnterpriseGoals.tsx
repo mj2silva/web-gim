@@ -11,7 +11,7 @@ const EnterpriseGoals: FC = () => {
         <ol>
           <li>
             Proveer soluciones integrales y eficientes de nuestros proyectos a
-            cargo, buscando la satisfacci6n del cliente, y la continuidad
+            cargo, buscando la satisfacción del cliente, y la continuidad
             operativa de los mismos.
           </li>
           <li>
