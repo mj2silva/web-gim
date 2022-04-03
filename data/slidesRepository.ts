@@ -14,6 +14,7 @@ export const getSlidesHome = async (): Promise<Slide[]> => {
     slides.push({
       id: slideDocument.id,
       url: slideData.url,
+      text: slideData.text,
     });
   });
   return slides;
@@ -29,6 +30,7 @@ export const getSlidesMobile = async (): Promise<Slide[]> => {
     slides.push({
       id: slideDocument.id,
       url: slideData.url,
+      text: slideData.text,
     });
   });
   return slides;

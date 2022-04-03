@@ -8,4 +8,5 @@ export interface ContactData {
 export type Slide = {
   id: string;
   url: string;
-}
+  text: string;
+};
