@@ -14,9 +14,9 @@ const ContactSection: FC = () => {
         <div className={styles.ContactSectionInfo}>
           <div className={styles.ContactSectionInfoCard}>
             <h5>Dirección</h5>
-            <h5>Calle Monterosa 270. Of. 901</h5>
+            <h5>Jr. Pacaritambo 176 Int. 102</h5>
             <a
-              href="https://goo.gl/maps/BhWmsWvL3rCv1Jh97"
+              href="https://goo.gl/maps/EA7dUs5zqXFqQe9u8"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -29,7 +29,9 @@ const ContactSection: FC = () => {
               Tel. <a href="tel:992613992">992 613 992</a>
             </h5>
             <h5>
-              <a href="mailto:informes@gim-peru.com">informes@gim-peru.com</a>
+              <a href="mailto:lys.reategui@gim-peru.com">
+                lys.reategui@gim-peru.com
+              </a>
             </h5>
           </div>
         </div>

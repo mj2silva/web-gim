@@ -30,24 +30,22 @@ const Cover: FC<Props> = ({ slides, slidesMobile }) => {
         </div>
         <div className={styles.CoverImages_mobile}>
           {slidesMobile.map((slide, index) => (
-            <>
-              <CoverCarouselItem
-                key={slide.url + "mob"}
-                imagePage={index}
-                src={slide.url}
-                text={slide.text}
-                layout="fill"
-                alt={slide.url}
-                objectFit="cover"
-                objectPosition="right"
-              />
-            </>
+            <CoverCarouselItem
+              key={"mob" + slide.url}
+              imagePage={index}
+              src={slide.url}
+              text={slide.text}
+              layout="fill"
+              alt={slide.url}
+              objectFit="cover"
+              objectPosition="right"
+            />
           ))}
         </div>
 
         <div className={styles.CoverControls}>
           {slides.map((slide, index) => (
-            <CoverCarouselControl key={slide.url} buttonPage={index} />
+            <CoverCarouselControl key={"ctrl" + slide.url} buttonPage={index} />
           ))}
         </div>
       </div>

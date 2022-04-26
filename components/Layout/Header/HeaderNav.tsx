@@ -90,7 +90,7 @@ const HeaderNav: FC<Props> = ({
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => setIsOpen((io) => !io);
   const { pathname } = useRouter();
-  const [isHidden, setIsHidden] = useState(false);
+  const [navStyle, setNavStyle] = useState("translateX(100%) scaleX(100%)");
 
   useEffect(() => {
     setIsOpen(false);
@@ -105,13 +105,22 @@ const HeaderNav: FC<Props> = ({
 
   useEffect(() => {
     if (!isOpen) {
-      window.setTimeout(() => {
-        setIsHidden(true);
-      }, 500);
+      if (window) {
+        window.setTimeout(() => {
+          setNavStyle("translateX(100%) scaleX(0)");
+          console.log("hided");
+        }, 500);
+      } else {
+        console.log("No window");
+      }
     } else {
-      setIsHidden(false);
+      setNavStyle("translateX(0)");
     }
   }, [isOpen]);
+
+  useEffect(() => {
+    console.log(navStyle);
+  }, [navStyle]);
 
   return (
     <div className={className}>
@@ -125,9 +134,7 @@ const HeaderNav: FC<Props> = ({
           ref={navRef}
           className={headerNavClassName}
           style={{
-            transform: isHidden
-              ? "translateX(100%) scaleX(100%)"
-              : "translateX(0)",
+            transform: navStyle,
           }}
         >
           <Nav className={navClassName}>

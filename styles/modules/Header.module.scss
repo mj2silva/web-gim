@@ -13,6 +13,7 @@
   border-bottom: 5px solid $blue-primary;
   transition-duration: 500ms;
   z-index: 999;
+  overflow: visible;
   &_Transparent {
     background-color: transparent;
     border-bottom-color: transparent;
@@ -41,7 +42,7 @@
     }
   }
   &Logo {
-    width: 9rem;
+    width: 12rem;
     aspect-ratio: 16 / 7;
     @media screen and (max-width: $breakpoint-tablet){
       width: 9rem;
