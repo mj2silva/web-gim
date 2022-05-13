@@ -1,6 +1,5 @@
 import { FC } from "react";
 import Image from "next/image";
-import Link from "next/link";
 import styles from "@styles/OurTeam.module.scss";
 import SectionSubtitle from "@components/SectionSubtitle";
 
@@ -27,11 +26,13 @@ const OurTeam: FC = () => {
             y saneamiento físico legal de sus locales comerciales.
           </p>
         </div>
+        {/*
         <Link href="/nosotros/nuestro-equipo" passHref>
           <a className={"button " + styles.OurTeamButton}>
             Ver equipo completo
           </a>
         </Link>
+        */}
       </div>
       <div className={styles.OurTeamPhoto}>
         <div className={styles.OurTeamImage}>

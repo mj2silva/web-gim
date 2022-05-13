@@ -202,10 +202,3 @@ main {
   border-radius: 50%;
   animation: spin 800ms infinite linear;
 }
-
-:target::before {
-  content: "";
-  display: block;
-  position: absolute;
-  top: -25rem;
-}

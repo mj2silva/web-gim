@@ -11,6 +11,7 @@ import { Service } from "@components/services/types";
 
 import styles from "@styles/Services.module.scss";
 import ServiceDetail from "@components/services/ServiceDetail";
+import ServiceCustomerStories from "@components/services/ServiceCustomerStories";
 
 interface Props {
   service: Service;
@@ -65,6 +66,9 @@ const ServiceDropdownItem: FC<Props> = ({ service, order }) => {
           <p>{service.description}</p>
         </div>
         <ServiceDetail serviceDetail={service.detail} />
+        {service.stories && (
+          <ServiceCustomerStories customerStories={service.stories} />
+        )}
         <div className={styles.ServicesCallToAction}>
           <h2 className={styles.ServicesCallToActionQuestion}>
             ¿DESEAS COTIZAR UN SERVICIO DE {service.title}?

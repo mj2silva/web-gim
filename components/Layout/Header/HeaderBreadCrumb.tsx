@@ -15,7 +15,7 @@ const formatPathName = (path: string): ReactNode[] => {
           href={`/${item.toLowerCase()}`}
           passHref
         >
-          <a>{item.replace("-", " ")}</a>
+          <a>{item.split("#")[0].replace("-", " ")}</a>
         </Link>
       ) : (
         <span key={item.toLowerCase() + index}>
@@ -27,7 +27,7 @@ const formatPathName = (path: string): ReactNode[] => {
               .join("/")}`}
             passHref
           >
-            <a>{item.replace("-", " ")}</a>
+            <a>{item.split("#")[0].replace("-", " ")}</a>
           </Link>
         </span>
       );

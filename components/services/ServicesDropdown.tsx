@@ -31,6 +31,25 @@ const services: Service[] = [
         ],
       },
     ],
+    stories: [
+      {
+        name: "Rosalyn Fernandez de Castro Tudela",
+        position: "Relaciones Institucionales Lindcorp - TAMBO y ARUMA",
+        text:
+          "Estamos muy satisfechos con los servicios prestados por GIM, siempre comprometidos con lo encomendado, muchas" +
+          "veces antes de los plazos determinados, cuidando los intereses de sus clientes, brindando así una experiencia excelente.",
+      },
+      {
+        name: "Patricio Lazarte Palao",
+        position:
+          "Gerente de Desarrollo Inmobiliario, Infraestructura y Mantenimiento - OXXO PERÚ",
+        text:
+          "GIM es una empresa con excelentes profesionales, con personas de gran calidad y sobre todo muy efectivas en " +
+          "tiempo y forma. Nos ayudaron en el saneamiento de nuestra oficina principal, así como también en la obtención" +
+          " de muchas licencias complicadas de nuestros locales, lo que nos permitió mantener la continuidad operativa " +
+          "de nuestro negocio.",
+      },
+    ],
   },
   {
     id: 2,
@@ -97,7 +116,8 @@ const ServicesDropdown: FC = () => {
         defaultOpen={hash ? Number.parseInt(hash) : 1}
       >
         {services.map((service, index) => (
-          <div key={service.id} id={service.id.toString()}>
+          <div key={service.id} style={{ position: "relative" }}>
+            <div className={styles.target} id={service.id.toString()} />
             <ServiceDropdownItem service={service} order={index + 1} />
           </div>
         ))}
