@@ -28,7 +28,7 @@ const CoverCarouselImage: FC<Props> = ({ imagePage, alt, text, ...rest }) => {
       <div className={contentClassName}>
         <div className={styles.CoverIntro}>
           <h1>{text}</h1>
-          <Link href="/servicios" passHref>
+          <Link href={`/servicios#${imagePage + 1}`} passHref>
             <a className={cn("button", styles.CoverButton)}>Conoce más</a>
           </Link>
         </div>
