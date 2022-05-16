@@ -44,11 +44,13 @@ const navigationObject: NavigationObject[] = [
         title: "¿QUIÉNES SOMOS?",
         type: "link",
       },
+      /*
       {
         href: "/nosotros/nuestro-equipo",
         title: "NUESTRO EQUIPO",
         type: "link",
       },
+      */
     ],
   },
   {
