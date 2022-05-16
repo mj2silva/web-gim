@@ -202,3 +202,7 @@ main {
   border-radius: 50%;
   animation: spin 800ms infinite linear;
 }
+
+html {
+  scroll-behavior: smooth;
+}
