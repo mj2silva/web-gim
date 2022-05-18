@@ -10,6 +10,7 @@ import { getProjects } from "data/projectsRepository";
 import { Project } from "@components/projects/types";
 import { getSlidesHome, getSlidesMobile } from "data/slidesRepository";
 import { Slide } from "data/types";
+import BrandsCarousel from "@components/home/BrandsCarousel";
 
 export const getStaticProps: GetStaticProps = async () => {
   const projects = await getProjects({ limit: 2 });
@@ -43,6 +44,7 @@ const Home: NextPage<Props> = ({ projects, slidesHome, slidesMobile }) => {
         <ServicesPresentation />
         <ProjectsPresentation projects={projects} />
         <HighLights />
+        <BrandsCarousel />
         <ContactSection />
       </main>
     </>

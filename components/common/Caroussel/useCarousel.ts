@@ -79,6 +79,7 @@ const useCarousel = (props: CarouselProps) => {
     currentPage,
     stopInterval,
     reStartInterval,
+    totalPages,
   };
 };
 

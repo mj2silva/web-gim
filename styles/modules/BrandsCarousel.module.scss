@@ -1,0 +1,116 @@
+@import "../common/index";
+
+@keyframes go-in {
+  from {
+    transform: translateX(100%) scale(0.6);
+  }
+  to {
+    transform: translateX(0) scale(0.6);
+  }
+}
+
+@keyframes go-inactive {
+  from {
+    transform: translateX(100%) scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(0) scale(0.6);
+    opacity: 0.5;
+  }
+}
+
+@keyframes go-active {
+  from {
+    transform: translateX(100%) scale(0.6);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  from {
+    transform: translateX(0) scale(0.6);
+    opacity: 0.5;
+    width: 0;
+  }
+  to {
+    transform: translateX(-20rem) scale(0.6);
+    opacity: 0;
+    width: 0;
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(100%) scale(0.6);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0) scale(0.6);
+    opacity: 0.5;
+  }
+}
+
+.BrandsCarousel {
+  min-height: 15rem;
+  padding: 4rem 0;
+  margin: 0 auto;
+
+  &Brands {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &Brand {
+    position: relative;
+    width: 20rem;
+    aspect-ratio: 4 / 3;
+    opacity: 0.5;
+    transform: scale(0.6);
+    transition-duration: 500ms;
+    display: none;
+    &_active {
+      display: block;
+      opacity: 1;
+      transform: scale(1);
+      order: 3;
+      animation: go-active linear 500ms;
+    }
+    &_0 {
+      display: block;
+      animation: disappear linear 500ms forwards;
+      width: 0;
+      overflow: visible;
+      aspect-ratio: 4 / 3;
+      order: 0;
+    }
+    &_1 {
+      display: block;
+      order: 1;
+      animation: go-in linear 500ms;
+    }
+    &_2 {
+      display: block;
+      order: 2;
+      animation: go-inactive linear 500ms;
+    }
+    &_4 {
+      display: block;
+      order: 4;
+      animation: go-in linear 500ms forwards;
+    }
+    &_5 {
+      display: block;
+      order: 5;
+      animation: appear linear 500ms;
+    }
+    &_6 {
+      opacity: 0;
+      order: 6;
+    }
+  }
+}
