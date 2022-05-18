@@ -18,6 +18,7 @@ export const CarouselContext = createContext<ReturnType<typeof useCarousel>>({
     return;
   },
   currentPage: 0,
+  totalPages: 0,
 });
 
 interface Props {
