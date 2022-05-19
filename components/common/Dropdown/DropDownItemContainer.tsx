@@ -14,14 +14,24 @@ const DropdownItemContainer: FC<Props> = ({
   openClassName,
   closedClassName,
 }) => {
-  const { isOpen } = useContext(DropdownItemContext);
+  const { isOpen, isClicked } = useContext(DropdownItemContext);
 
   const bodyClassName = cn(className, {
     [openClassName || ""]: isOpen,
     [closedClassName || ""]: !isOpen,
   });
 
-  return <div className={bodyClassName}>{children}</div>;
+  return (
+    <div
+      style={{
+        animation: isClicked ? "initial" : "none",
+        transitionDuration: isClicked ? "500ms" : "0ms",
+      }}
+      className={bodyClassName}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default DropdownItemContainer;

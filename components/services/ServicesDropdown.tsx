@@ -108,13 +108,10 @@ const services: Service[] = [
 
 const ServicesDropdown: FC = () => {
   const { asPath } = useRouter();
-  const hash = asPath.split("#")[1];
+  const hash = Number.parseInt(asPath.split("#")[1]) || 1;
   return (
     <section className={styles.Services}>
-      <Dropdown
-        className={styles.ServicesDropdown}
-        defaultOpen={hash ? Number.parseInt(hash) : 1}
-      >
+      <Dropdown className={styles.ServicesDropdown} defaultOpen={hash}>
         {services.map((service, index) => (
           <div key={service.id} style={{ position: "relative" }}>
             <div className={styles.target} id={service.id.toString()} />

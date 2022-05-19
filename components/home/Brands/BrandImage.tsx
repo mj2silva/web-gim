@@ -1,4 +1,4 @@
-import { FC, useContext, useEffect } from "react";
+import { FC, useContext } from "react";
 import styles from "@styles/BrandsCarousel.module.scss";
 import Image from "next/image";
 import { Brand } from "../types";
@@ -13,10 +13,7 @@ type Props = {
 const BrandImage: FC<Props> = (props) => {
   const { brand, page } = props;
   const { currentPage, totalPages } = useContext(CarouselContext);
-  useEffect(() => {
-    console.log({ currentPage, totalPages });
-    console.log();
-  }, [currentPage, totalPages]);
+
   const className = cn(styles.BrandsCarouselBrand, {
     [styles.BrandsCarouselBrand_0]:
       (currentPage - 3 >= 0 && currentPage - 3 === page) ||
@@ -38,6 +35,7 @@ const BrandImage: FC<Props> = (props) => {
       (currentPage + 3 < totalPages && currentPage + 3 === page) ||
       (currentPage + 3 >= totalPages && currentPage + 3 - totalPages === page),
   });
+
   return (
     <div key={brand.name} className={className}>
       <div

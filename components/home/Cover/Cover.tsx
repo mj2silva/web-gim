@@ -25,6 +25,7 @@ const Cover: FC<Props> = ({ slides, slidesMobile }) => {
               alt={slide.url}
               objectFit="cover"
               objectPosition="right"
+              priority
             />
           ))}
         </div>
@@ -39,6 +40,7 @@ const Cover: FC<Props> = ({ slides, slidesMobile }) => {
               alt={slide.url}
               objectFit="cover"
               objectPosition="right"
+              priority
             />
           ))}
         </div>

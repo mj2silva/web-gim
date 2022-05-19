@@ -110,7 +110,6 @@ const HeaderNav: FC<Props> = ({
       if (window) {
         window.setTimeout(() => {
           setNavStyle("translateX(100%) scaleX(0)");
-          console.log("hided");
         }, 500);
       } else {
         console.log("No window");
@@ -119,10 +118,6 @@ const HeaderNav: FC<Props> = ({
       setNavStyle("translateX(0)");
     }
   }, [isOpen]);
-
-  useEffect(() => {
-    console.log(navStyle);
-  }, [navStyle]);
 
   return (
     <div className={className}>

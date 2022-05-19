@@ -6,6 +6,7 @@ type DropdownItemContextProps = {
   open: () => void;
   close: () => void;
   isOpen: boolean;
+  isClicked: boolean;
 };
 
 export const DropdownItemContext = createContext<DropdownItemContextProps>({
@@ -17,6 +18,7 @@ export const DropdownItemContext = createContext<DropdownItemContextProps>({
     return;
   },
   isOpen: false,
+  isClicked: false,
 });
 
 interface Props {
@@ -24,8 +26,9 @@ interface Props {
 }
 
 const DropdownItemProvider: FC<Props> = ({ children, id }) => {
-  const [isOpen, setIsOpen] = useState(false);
-  const { activeId, closeDropdown, openDropdown } = useContext(DropdownContext);
+  const { activeId, closeDropdown, openDropdown, isClicked } =
+    useContext(DropdownContext);
+  const [isOpen, setIsOpen] = useState(activeId === id);
 
   useEffect(() => {
     setIsOpen(activeId === id);
@@ -40,7 +43,9 @@ const DropdownItemProvider: FC<Props> = ({ children, id }) => {
   };
 
   return (
-    <DropdownItemContext.Provider value={{ id, isOpen, close, open }}>
+    <DropdownItemContext.Provider
+      value={{ id, isOpen, close, open, isClicked }}
+    >
       {children}
     </DropdownItemContext.Provider>
   );

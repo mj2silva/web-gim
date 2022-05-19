@@ -11,6 +11,7 @@ export const DropdownContext = createContext<DropdownContextProps>({
     return;
   },
   activeId: -1,
+  isClicked: false,
 });
 
 interface Props {

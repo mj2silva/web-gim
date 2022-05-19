@@ -10,6 +10,11 @@ const Servicios: NextPage = () => {
       <Head>
         <title>Servicios | GIM</title>
       </Head>
+      <style global jsx>{`
+        html {
+          scroll-behavior: auto;
+        }
+      `}</style>
       <main className="main">
         <CoverPicture src={"/img/encabezado2.png"} />
         <ServicesDropdown />

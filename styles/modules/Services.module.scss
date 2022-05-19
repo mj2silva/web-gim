@@ -93,7 +93,7 @@
         max-height: 60rem;
         @media screen and (max-width: $breakpoint-tablet) {
           padding: 1rem 2rem 2rem 2rem;
-          max-height: 100rem;
+          max-height: 120rem;
         }
       }
       &_close {
@@ -156,5 +156,13 @@
 .target {
   position: absolute;
   top: -8rem;
+  width: 100%;
+  height: 8rem;
 }
 
+.target:target:before {
+  position: absolute;
+  content: '';
+  top: 0;
+  width: 100%;
+}
