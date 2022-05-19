@@ -14,7 +14,7 @@ interface Props {
   customerStories: Service["stories"];
 }
 
-const customerStoriesTitle = "Ver historias";
+const customerStoriesTitle = "Leer testimonios";
 
 const ServiceCustomerStories: FC<Props> = ({ customerStories }) => {
   return (

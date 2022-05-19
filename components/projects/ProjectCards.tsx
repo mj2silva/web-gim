@@ -5,9 +5,9 @@ import { FC } from "react";
 
 type Props = {
   projects: Project[];
-}
+};
 
-const ProjectCards:FC<Props> = ({projects}) => {
+const ProjectCards: FC<Props> = ({ projects }) => {
   return (
     <div className={styles.Projects}>
       <div className={styles.ProjectCards}>
@@ -15,11 +15,11 @@ const ProjectCards:FC<Props> = ({projects}) => {
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>
-      <div className={styles.ProjectsLoad}>
+      {/*<div className={styles.ProjectsLoad}>
         <button className={"button " + styles.ProjectsLoadButton}>
           <span>+</span>
         </button>
-      </div>
+      </div>*/}
     </div>
   );
 };
