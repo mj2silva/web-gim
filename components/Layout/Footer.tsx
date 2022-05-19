@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "@styles/modules/Footer.module.scss";
 import GIMLogo from "@components/GIMLogo";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 const Footer: FC = () => {
   return (
@@ -31,12 +31,14 @@ const Footer: FC = () => {
             </div>
           </div>
           <div className={styles.FooterSocialMedia}>
-            <div className={styles.FooterSocialMediaLogo}>
-              <FontAwesomeIcon icon={faFacebookF} />
-            </div>
-            <div className={styles.FooterSocialMediaLogo}>
-              <FontAwesomeIcon icon={faInstagram} />
-            </div>
+            <a
+              href="https://www.linkedin.com/company/gim-peru"
+              className={styles.FooterSocialMediaLogo}
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} />
+            </a>
           </div>
         </div>
         <div className={styles.FooterFoot}>

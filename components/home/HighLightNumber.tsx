@@ -17,17 +17,6 @@ const HighLightNumber: FC<Props> = ({
   const [currentValue, setCurrentValue] = useState(startValue || 0);
   const [currentInterval, setCurrentInterval] = useState<number>();
 
-  /*  useEffect(() => {
-    setCurrentInterval((iv) => {
-      if (!iv) {
-        return window.setInterval(() => {
-          setCurrentValue((cv) => Math.min(cv + 1, value));
-        }, timeout || 30);
-      }
-      return undefined;
-    });
-  }, [value, timeout]);*/
-
   useEffect(() => {
     if (currentInterval) {
       if (currentValue >= value) window.clearInterval(currentInterval);
@@ -42,7 +31,6 @@ const HighLightNumber: FC<Props> = ({
             setCurrentValue((cv) => Math.min(cv + 1, value));
           }, timeout || 30);
         }
-        console.log("do nothing");
         return undefined;
       });
     }

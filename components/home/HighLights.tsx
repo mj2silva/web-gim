@@ -8,7 +8,7 @@ const HighLights: FC = () => {
     <section className={styles.HighLights}>
       <div className={styles.HighLightsItem}>
         <div className={styles.HighLightsTitle}>
-          <HighLightNumber className={styles.HighLightsNumber} value={30} />
+          <HighLightNumber className={styles.HighLightsNumber} value={22} />
           <div className={styles.HighLightsText}>días</div>
         </div>
         <div className={styles.HighLightsName}>
@@ -20,7 +20,7 @@ const HighLights: FC = () => {
           <div className={styles.HighLightsText}>+</div>
           <HighLightNumber
             className={styles.HighLightsNumber}
-            value={100}
+            value={50}
             timeout={20}
           />
         </div>
@@ -36,7 +36,12 @@ const HighLights: FC = () => {
       </div>
       <div className={styles.HighLightsItem}>
         <div className={styles.HighLightsTitle}>
-          <HighLightNumber className={styles.HighLightsNumber} value={17} />
+          <div className={styles.HighLightsText}>+</div>
+          <HighLightNumber
+            className={styles.HighLightsNumber}
+            value={400}
+            timeout={3}
+          />
         </div>
         <div className={styles.HighLightsName}>
           Licencias aprobadas a nivel nacional
